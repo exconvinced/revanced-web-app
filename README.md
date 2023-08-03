@@ -21,7 +21,7 @@ or the command line [ReVanced CLI](https://github.com/revanced/revanced-cli) a b
 
 Full layout             |  Mobile layout
 :-------------------------:|:-------------------------:
-![image](https://github.com/Exconvinced/revanced-web-app/assets/139973199/68cc22b6-c6e9-4c03-9fe7-d1c896676a32)  |  ![image](https://github.com/Exconvinced/revanced-web-app/assets/139973199/6a173757-c7ac-4fbc-84e4-a7d2ae391312)
+![image](./preview/full.png)  |  ![image](./preview/mobile.png)
 
 #### Prerequisites
 Download [Java SDK 11.0.2](https://jdk.java.net/archive/). 
