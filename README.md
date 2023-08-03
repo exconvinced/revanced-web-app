@@ -34,12 +34,11 @@ The CLI option is versatile but non-techy people may find it hard to set up and 
 This project combines the accessibility of the mobile app and the efficiency of CLI.
 
 <details>
-<summary><h5>More</h5></summary>
+<summary><h5>Dedication to CS50</h5></summary>
   I needed to build something for the <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50</a> final project.
-  This is relatively easier compared to solving the Tideman problem set!
+  I completed this project in 3 days, thanks to ChatGPT for helping me troubleshoot errors.
+  This is relatively easier than solving the Tideman problem set!
   <br><br>
   I learned a lot about the communication logic between `app.routes` in Flask and `event.sources` in Javascript. 
-  This is a good beginner project but I should have studied about proper coding paradigms for writing cleaner code.
-  I completed this project in 3 days, thanks to ChatGPT for helping me troubleshoot errors.
-  
+  I should study proper coding paradigms for writing cleaner code for my next project.
 </details>
