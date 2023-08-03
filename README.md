@@ -11,13 +11,14 @@ or the command line [ReVanced CLI](https://github.com/revanced/revanced-cli) a b
 
 #### Specifications
 
-- Built with Flask and Javascript. 
+- Built on Flask and Javascript.
+- Applies styles from [Tailwind CSS](https://tailwindcss.com/).
 - Runs [ReVanced-CLI](https://github.com/revanced/revanced-cli) with Java SDK 11.
 - Gets latest patches from the [official repo](https://raw.githubusercontent.com/ReVanced/revanced-patches/main/patches.json).
-- Uses [AAPT](https://developer.android.com/tools/aapt2) to read APK manifest data.
+- Uses [AAPT](https://developer.android.com/tools/aapt2) to read and verify APK manifest data.
 
 #### Disclaimer
-This is not an official app. This app simply utilizes ReVanced in the backend. [Read more...](#motivation)
+This is not an official app. This app simply utilizes ReVanced in the backend.
 
 #### Preview
 
@@ -27,18 +28,17 @@ Full layout             |  Mobile layout
 
 ### Motivation
 
-In my experience, the mobile app is buggy and slow on my Android device. 
-The patch process fails at times and halts in background if you open other apps. 
-Although you can use the CLI to patch on PC, non-techy people find it hard to set up and use.
+The mobile app is occasionally buggy and slow on some devices,
+e.g. the patch process eventually freezes especially upon leaving and returning to the app. 
+The CLI option is versatile but non-techy people may find it hard to set up and use.
 This project combines the accessibility of the mobile app and the efficiency of CLI.
 
 <details>
-<summary><h3>More</h3></summary>
-  
+<summary><h5>More</h5></summary>
   I needed to build something for the <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50</a> final project.
   This is relatively easier compared to solving the Tideman problem set!
   <br><br>
-  I learned about the communication logic behind app routes in Flask and event sources in Javascript. 
+  I learned a lot about the communication logic between `app.routes` in Flask and `event.sources` in Javascript. 
   This is a good beginner project but I should have studied about proper coding paradigms for writing cleaner code.
   I completed this project in 3 days, thanks to ChatGPT for helping me troubleshoot errors.
   
