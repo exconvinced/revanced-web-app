@@ -1,0 +1,35 @@
+<!-- Dashboard -->
+<div id="dashboard-panel" class="flex flex-col xl:w-1/4 gap-revanced xl:flex-grow-0">
+
+    <!-- Upload apk -->
+    <input type="file" id="file-input" style="display: none;">
+    <button id="upload-button" class="bg-zinc-800 group hover:bg-zinc-700 rounded-vanced text-center p-2">
+        <div class="p-4 rounded-lg border-zinc-600 group-hover:border-zinc-500 border-dashed border-2">
+            <h3 class="text-lg mb-2">Upload or drag file</h3>
+            <p id="file-name" class="font-mono text-sm truncate opacity-50">No file uploaded.</p>
+        </div>
+    </button>
+
+    <!-- Selected application -->
+    <button id="selected-application"
+        class="bg-zinc-800 rounded-vanced p-6 text-left">
+        <h3>Selected application</h3>
+        <ul class="text-sm">
+            <li><b id="package-name"></b></li>
+            <li>Current: <span id="package-current-version"></span></li>
+            <li>Suggested: <span id="package-recommended-version"></span></li>
+        </ul>
+    </button>
+
+    <!-- Selected patches -->
+    <button id="selected-patches"
+        class="bg-zinc-800 rounded-vanced p-6 text-left hidden xl:flex flex-col flex-1">
+        <h3 id="selected-patches-count" class="mb-2 flex">No patches found</h3>
+        <div class="grow relative overflow-y-scroll">
+            <ul id="selected-patches-list" class="list-disc list-inside text-sm absolute">
+            </ul>
+        </div>
+    </button>
+
+    {% include 'patch_button.html' %}
+</div>

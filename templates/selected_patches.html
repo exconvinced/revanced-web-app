@@ -1,0 +1,13 @@
+{% if patches %}
+<ul id="selected-patches-list" class="list-disc list-inside text-sm absolute">
+    {% for patch in patches %}
+    {% if patch.excluded %}
+    <li class="hidden {{ patch.token }}">{{ patch.name }}</li>
+    {% else %}
+    <li class="{{ patch.token }}">{{ patch.name }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+{% endif %}
+
+<!-- {% include selected_patches.htmk %} -->

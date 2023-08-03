@@ -1,0 +1,27 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.font-mono {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 12px;
+}
+
+.disabled-button {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.patch-checkbox {
+    pointer-events: none;
+}
+
+.rounded-vanced {
+    border-radius: 0.75rem;
+}
+
+.gap-revanced {
+    gap: 0.75rem;
+}

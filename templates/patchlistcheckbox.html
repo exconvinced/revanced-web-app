@@ -1,0 +1,33 @@
+<!-- Checkbox -->
+{% if patches %}
+{% for patch in patches %}
+<button
+    class="patch-checkbox-button bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800 rounded-vanced p-6 text-left flex justify-between">
+    <ul class="text-sm space-y-1">
+        <li><b class="patch-checkbox-label {{ patch.token }}">{{ patch.name }}</b><br>
+            <p class='opacity-50'>{{ patch.version }}
+                &nbsp;{% if patch.excluded %}<i class="text-xs opacity-25">Excluded by default</i>{% endif
+                %}</p>
+        </li>
+        <li class='opacity-75'>{{ patch.description }}</li>
+    </ul>
+    {% if patch.excluded %}
+    <input type="checkbox" class="patch-checkbox" name="{{ patch.token }}" value="{{ patch.name }}">
+    {% else %}
+    <input type="checkbox" class="patch-checkbox" name="{{ patch.token }}" value="{{ patch.name }}" checked>
+    {% endif %}
+</button>
+{% endfor %}
+{% else %}
+<button
+    class="disabled-button patch-checkbox-button bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800 rounded-vanced p-6 text-left flex justify-between">
+    <ul class="text-sm space-y-1">
+        <li><b>No patches available</b><br>
+            <p class='invisible'>0.0.0</p>
+        </li>
+        <li class='invisible'></li>
+    </ul>
+</button>
+{% endif %}
+
+<!-- {% include 'patchlistcheckbox.html' %} -->

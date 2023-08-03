@@ -1,0 +1,37 @@
+<!doctype html>
+
+<head>
+    <title>ReVanced Manager</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <!-- <script src="static/beginPatch.js"></script>  -->
+    <script type="module" src="static/patchlist.js"></script>
+    <script type="module" src="static/upload.js"></script>
+    <!-- <script src="static/patches.js"></script> -->
+    <script src="static/script.js"></script>
+    <script src="static/download.js"></script>
+    <script type="module" src="static/patch_button.js"></script>
+</head>
+
+<body class="h-screen w-screen lg:p-20 p-5 bg-zinc-900 text-white flex flex-col gap-revanced">
+    <!-- Header -->
+    <a class="lg:flex items-center mr-auto hidden" href="/">
+        <img src="static/icon.png" width="60" class="rounded-vanced">
+        <h1 class="px-4 sm:text-xl">ReVanced Manager</h1>
+    </a>
+    <div class="flex flex-col xl:flex-row grow gap-revanced h-max">
+        {% block index %}{% endblock %}
+    </div>
+</body>
