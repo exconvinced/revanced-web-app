@@ -23,6 +23,12 @@ Full layout             |  Mobile layout
 :-------------------------:|:-------------------------:
 ![image](https://github.com/Exconvinced/revanced-web-app/assets/139973199/68cc22b6-c6e9-4c03-9fe7-d1c896676a32)  |  ![image](https://github.com/Exconvinced/revanced-web-app/assets/139973199/6a173757-c7ac-4fbc-84e4-a7d2ae391312)
 
+#### Prerequisites
+Download [Java SDK 11.0.2](https://jdk.java.net/archive/). 
+Finally, extract it into `/revanced` directory, then rename the extracted folder as `jdk`.
+The complete path for Java should now be `/revanced/jdk/bin/java.exe`.
+
+
 #### Disclaimer
 This is not an official app. This app simply utilizes ReVanced in the backend.
 
