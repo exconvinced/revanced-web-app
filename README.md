@@ -20,4 +20,10 @@ This project combines the accessibility of the mobile app and the efficiency of 
 <summary>Motivation</summary>
   Well, I just needed to build anything for the <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50</a> final project.
   This is relatively easier compared to solving the Tideman problem set!
+
+  I actually enjoyed learning about the logic behind app routes in Flask and event sources in Javascript. 
+  For a beginner like me, this project is well-done. 
+  However, I should have studied about best coding paradigms for writing cleaner code.
+  How I name my files, variables, classes, and ids needs more work.
+  Nevertheless, I completed this project in 3 days, thanks to ChatGPT for helping me troubleshoot errors.
 </details>
