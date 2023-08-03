@@ -1,9 +1,9 @@
 # revanced-web-app
 
-An implementation of ReVanced on the web!
-Built with Flask and spaghetti code.
-Runs `revanced=cli` via Java.
-Gets latest patches from official repo.
+An implementation of [ReVanced](https://github.com/revanced/revanced-cli) on the web!
+Built with Flask and spaghetti code. Never gonna untangle them again!
+Runs `revanced-cli` with Java SDK 11. Just upload your unpatched apk.
+Latest patches are fetched from the [official repo](https://raw.githubusercontent.com/ReVanced/revanced-patches/main/patches.json).
 
 Full layout             |  Mobile layout
 :-------------------------:|:-------------------------:
