@@ -17,16 +17,16 @@ or the command line [ReVanced CLI](https://github.com/revanced/revanced-cli) a b
 - Gets latest patches from the [official repo](https://raw.githubusercontent.com/ReVanced/revanced-patches/main/patches.json).
 - Uses [AAPT](https://developer.android.com/tools/aapt2) to read and verify APK manifest data.
 
-#### Disclaimer
-This is not an official app. This app simply utilizes ReVanced in the backend.
-
 #### Preview
 
 Full layout             |  Mobile layout
 :-------------------------:|:-------------------------:
 ![image](https://github.com/Exconvinced/revanced-web-app/assets/139973199/68cc22b6-c6e9-4c03-9fe7-d1c896676a32)  |  ![image](https://github.com/Exconvinced/revanced-web-app/assets/139973199/6a173757-c7ac-4fbc-84e4-a7d2ae391312)
 
-### Motivation
+#### Disclaimer
+This is not an official app. This app simply utilizes ReVanced in the backend.
+
+#### Motivation
 
 The mobile app is occasionally buggy and slow on some devices,
 e.g. the patch process eventually freezes especially upon leaving and returning to the app. 
