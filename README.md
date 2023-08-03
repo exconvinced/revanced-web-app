@@ -4,7 +4,7 @@
 
 #### Description:
 
-A browser implementation of the popular [ReVanced](https://github.com/ReVanced)!
+A web implementation of the popular [ReVanced](https://github.com/ReVanced)!
 Patch your android apps on a familiar interface but now on powerful PC hardware.
 Covers those who find the mobile app [ReVanced Manager](https://github.com/revanced/revanced-manager) occasionally slow and buggy 
 or the command line [ReVanced CLI](https://github.com/revanced/revanced-cli) a bit cryptic to set up and use.
