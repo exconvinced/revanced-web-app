@@ -1,6 +1,6 @@
 # ReVanced Web App
 
-#### Video Demo:  [ReVanced Web App]([https://youtu.be/dQw4w9WgXcQ](https://youtu.be/-MK7L0JYTxU))
+#### Video Demo:  [ReVanced Web App](https://youtu.be/-MK7L0JYTxU)
 
 #### Description:
 
