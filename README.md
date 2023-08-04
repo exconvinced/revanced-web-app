@@ -1,6 +1,8 @@
 # ReVanced Web App
 
-#### Video Demo:  [TBD](https://youtu.be/dQw4w9WgXcQ)
+#### Video Demo:  [ReVanced Web App](https://youtu.be/-MK7L0JYTxU)
+
+
 
 #### Description:
 
@@ -23,10 +25,10 @@ Full layout             |  Mobile layout
 :-------------------------:|:-------------------------:
 ![image](./preview/full.png)  |  ![image](./preview/mobile.png)
 
-#### Prerequisites
+<!-- #### Prerequisites
 Download [Java SDK 11.0.2](https://jdk.java.net/archive/). 
 Finally, extract it into `/revanced` directory, then rename the extracted folder as `jdk`.
-The complete path for Java should now be `/revanced/jdk/bin/java.exe`.
+The complete path for Java should now be `/revanced/jdk/bin/java.exe`. -->
 
 
 #### Disclaimer
