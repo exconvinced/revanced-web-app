@@ -1,9 +1,5 @@
 __pycache__/*
 revanced-cache/*
-revanced/jdk/*
-revanced/apk/*
-revanced/apk/*
+revanced/*
 options.json
-revanced/dependencies/old/integrations.apk
-revanced/dependencies/old/patches.jar
 launch.bat
