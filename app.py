@@ -1,6 +1,5 @@
-from flask import Flask, flash, redirect, render_template, request, Response, jsonify, send_file
+from flask import Flask, render_template, request, Response, jsonify, send_file
 import helper as h
-import json
 
 app = Flask(__name__)
 global_data = None
@@ -69,21 +68,9 @@ def download():
     return response
 
 
-class RecommendedPackage:
-    def __init__(self, name: str, version: str):
-        self.name = name
-        self.app_name = h.app_name(self.name)
-        self.version = version
-        latest_version = h.get_all_app_versions(self.name)[-1]
-        self.recommended_version = latest_version if latest_version else 'Any'
-
-
 @app.route("/")
 def dashboard():
-    app = ('com.google.android.youtube', '18.23.35')
-    package = RecommendedPackage(*app)
-    patches = list(h.get_compatible_patches(*app))
-    return render_template("index.html", package=package, patches=patches)
+    return render_template("index.html", package=True)
 
 
 if __name__ == '__main__':
