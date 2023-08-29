@@ -1,4 +1,5 @@
 import { disablePatchButton, enablePatchButton, loadPackageInfo, resetPackageInfo, loadSelectedPatchesList, resetSelectedPatchesList, loadPatchesCheckbox, resetPatchesCheckbox } from './patchlist.js';
+import { activateTerminal, deactivateTerminal } from './terminal.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     const uploadButton = document.getElementById('upload-button');
@@ -6,12 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const defaultUploadText = uploadText.textContent;
     const fileName = document.getElementById('file-name');
     const fileInput = document.getElementById('file-input');
+
     
     function resetAll() {
         resetPackageInfo()
         resetSelectedPatchesList()
         resetPatchesCheckbox()
         disablePatchButton()
+        deactivateTerminal()
     }
 
     function uploadFile() {
@@ -31,11 +34,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 resetAll()
                 uploadText.textContent = 'File not supported!'
                 uploadButton.classList.remove('disabled-button');
+                deactivateTerminal()
             }
             else {
                 enablePatchButton()
                 uploadText.textContent = 'Uploaded!'
                 uploadButton.classList.remove('disabled-button');
+                activateTerminal()
                 return response.json()
             }
         }).then(data => {

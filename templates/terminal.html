@@ -1,17 +1,10 @@
 <!-- Terminal window -->
 <div class="relative grow xl:max-h-full max-h-32">
-    {% if package %}
-    <div id="terminal-window" class="bg-zinc-800 rounded-vanced p-6 w-full h-full overflow-y-scroll absolute">
-        <!-- Terminal -->
-        <p id="terminal" class="font-mono">Waiting to start...</p>
-    </div>
-    {% else %}
-    <div id="terminal-window"
+    <div id="terminal-window" 
         class="bg-zinc-800 rounded-vanced p-6 w-full h-full overflow-y-scroll absolute disabled-button">
         <!-- Terminal -->
-        <p id="terminal" class="font-mono">Upload an apk file first.</p>
+        <p id="terminal" class="font-mono"></p>
     </div>
-    {% endif %}
     <!-- Download button -->
     <button id="download-button"
         class="p-4 bg-blue-900 hover:bg-blue-700 rounded-vanced absolute bottom-4 right-4 hidden">
