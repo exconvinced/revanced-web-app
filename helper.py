@@ -37,63 +37,6 @@ def get_revanced_patches_json() -> dict:
 
 patches_json = get_revanced_patches_json()
 
-def reload_package_database(packages) -> bool:
-    """
-    Updates the database with the app name for a given package name from the Google Play Store
-    """
-    # Open database connection
-    conn = sqlite3.connect(database)
-    curr = conn.cursor()
-    curr.execute("CREATE TABLE IF NOT EXISTS packages (id INTEGER PRIMARY KEY AUTOINCREMENT, package_name TEXT NOT NULL UNIQUE, app_name TEXT DEFAULT NULL)")
-
-    for package in packages:
-        # Check if package name exists in database
-        package_url = "https://play.google.com/store/apps/details?id=" + package.name
-        response = requests.get(package_url)
-        try:
-            soup = bs(response.text, "html.parser")
-            app_name = soup.select_one("h1.Fd93Bb").span.string
-        except:
-            app_name = None
-        # Insert package name and app name into database
-        curr.execute("INSERT OR IGNORE INTO packages (package_name, app_name) VALUES (?, ?)", (package.name, app_name))
-    
-    # Commit and close database connection
-    conn.commit()
-    curr.close()
-    conn.close()
-
-    return True
-
-
-def app_name(package_name):
-    conn = sqlite3.connect(database)
-    curr = conn.cursor()
-    curr.execute("SELECT app_name FROM packages WHERE package_name=?", (package_name,))
-    result = curr.fetchone()
-    curr.close()
-    conn.close()
-    return result[0] if result else None
-
-
-class Package:
-    def __init__(self, name):
-        self.name = name
-        self.app_name = app_name(name)
-
-
-def get_all_packages() -> set:
-    """
-    Returns a set of all package names in the Revanced JSON data
-    """
-    packages = set()
-    for patch in patches_json:
-        for package in patch["compatiblePackages"]:
-            packages.add(package["name"])
-
-    return [Package(package) for package in packages]    
-
-
 def get_all_app_versions(package_name) -> list:
     """
     Returns a list of all app versions for a given package name
