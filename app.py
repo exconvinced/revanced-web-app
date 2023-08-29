@@ -64,8 +64,8 @@ def progress():
 
 @app.route("/download")
 def download():
-    response = send_file(h.retrieve_patched_apk(), as_attachment=True)
-    response.headers['Content-Disposition'] = f'attachment; filename={download_filename}.revanced.patched.apk'
+    response = send_file(h.retrieve_patched_apk(), as_attachment=True, download_name=f'{download_filename}.revanced.patched.apk')
+    print(response.headers)
     return response
 
 
