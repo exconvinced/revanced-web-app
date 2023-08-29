@@ -1,7 +1,5 @@
 import requests
 import json
-from bs4 import BeautifulSoup as bs
-import sqlite3
 import subprocess
 import os
 import re
@@ -168,7 +166,7 @@ def start_revanced_patch(args):
     if 'Finished' not in last_line:
         error = 'An error occurred while patching the APK file.'
         yield data_stream(json.dumps({'error': error}))
-            
+
     return
 
 
