@@ -1,4 +1,3 @@
 beautifulsoup4
-pyaxmlparser 
 requests
 flask

@@ -5,7 +5,7 @@ import sqlite3
 import subprocess
 import os
 import re
-from pyaxmlparser import APK
+
 
 revanced_dir = 'revanced'
 database = os.path.join('static', 'packages.db')
