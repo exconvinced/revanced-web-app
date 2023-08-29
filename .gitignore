@@ -6,3 +6,4 @@ revanced/apk/*
 options.json
 revanced/dependencies/old/integrations.apk
 revanced/dependencies/old/patches.jar
+launch.bat
