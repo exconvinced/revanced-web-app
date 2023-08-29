@@ -70,7 +70,7 @@ def download():
 
 @app.route("/")
 def dashboard():
-    return render_template("index.html", package=True)
+    return render_template("index.html")
 
 
 if __name__ == '__main__':
