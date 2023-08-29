@@ -1,6 +1,6 @@
 import requests
 import json
-import subprocess
+import subprocess as sp
 import os
 import re
 
@@ -103,7 +103,7 @@ def data_stream(string) -> str:
 def read_apk_file(file):
     try:
         aapt_command = [aapt, 'dump', 'badging', file]
-        aapt_output_bytes = subprocess.check_output(aapt_command)
+        aapt_output_bytes = sp.check_output(aapt_command)
         aapt_output = aapt_output_bytes.decode('utf-8')
 
         for line in aapt_output.splitlines():
@@ -158,15 +158,20 @@ def start_revanced_patch(args):
     
     command = [java, '-jar', revanced_cli, '-a', unpatched_apk, '-o', patched_apk, '-b', patches, '-m', integrations] + args.split()
 
-    process = subprocess.Popen(command, stdout=subprocess.PIPE, text=True)
+    process = sp.Popen(command, stdout=sp.PIPE, stderr=sp.STDOUT, text=True)
     for line in process.stdout: # Print both output and error messages
         last_line = line
-        yield data_stream(json.dumps({'data': line}))
+
+        if 'PatchResultError' in line:
+            break
+        elif line.startswith("INFO:"):
+            yield data_stream(json.dumps({'data': line}))
 
     if 'Finished' not in last_line:
         error = 'An error occurred while patching the APK file.'
         yield data_stream(json.dumps({'error': error}))
-
+        process.terminate()
+        
     return
 
 
