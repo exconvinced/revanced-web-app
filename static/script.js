@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const patchText = this.innerHTML;
         patchButton.textContent = 'Patching...';
 
+        // Hide download button if visible
+        downloadButton.classList.add('hidden');
+
         // Execute Revanced patch via progress route
         const eventSource = new EventSource('/progress');
         terminal.innerHTML = '';
