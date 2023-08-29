@@ -25,7 +25,7 @@ def get_revanced_patches_json() -> dict:
     """
     Downloads the latest Revanced Patches JSON from Github repository
     """
-    url = "https://raw.githubusercontent.com/ReVanced/revanced-patches/main/patches.json"
+    url = "https://raw.githubusercontent.com/ReVanced/revanced-patches/v2.186.0/patches.json"
     response = requests.get(url)
 
     if response.status_code == 200:
