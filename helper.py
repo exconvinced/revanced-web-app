@@ -169,7 +169,7 @@ def start_revanced_patch(args):
 
     if 'Finished' not in last_line:
         error = 'An error occurred while patching the APK file.'
-        yield data_stream(json.dumps({'error': error}))
+        yield data_stream(json.dumps({'error': f'ERROR: {error}'}))
         process.terminate()
         
     return
