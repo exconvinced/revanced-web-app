@@ -2,7 +2,7 @@ import os, sys, json
 import subprocess as sp
 from helper.aapt.aapt import APK
 from helper.revanced import Revanced
-from helper.revanced import APK_DIR
+from helper.revanced import REVANCED_DIR, APK_DIR
 
 
 rv = Revanced()
@@ -117,6 +117,13 @@ def remove_files_in_directory():
             file_path = os.path.join(APK_DIR, file)
             if os.path.isfile(file_path):
                 os.remove(file_path)
+
+        for file in os.listdir(REVANCED_DIR):
+            file_path = os.path.join(REVANCED_DIR, file)
+            if 'revanced-options.json' in file_path:
+                os.remove(file_path)
+                break
+
     except Exception as e:
         print(f"Error occurred while removing files: {e}")
 
