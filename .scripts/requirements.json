@@ -1,0 +1,24 @@
+[
+    {
+        "name": "revanced-cli",
+        "version": "2.22.0",
+        "extensions": [
+            "jar"
+        ]
+    },
+    {
+        "name": "revanced-patches",
+        "version": "2.187.0",
+        "extensions": [
+            "jar",
+            "json"
+        ]
+    },
+    {
+        "name": "revanced-integrations",
+        "version": "0.117.0",
+        "extensions": [
+            "apk"
+        ]
+    }
+]
