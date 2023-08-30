@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.error) {
                 hideDownloadButton();
                 resetPatchButton();
-                enablePatchButton('Patch failed!');
+                disablePatchButton('Patch failed!');
                 eventSource.close();
                 data.data = data.error
             }
