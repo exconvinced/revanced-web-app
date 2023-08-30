@@ -11,5 +11,4 @@ function deactivateTerminal() {
     terminal.textContent = "Upload an APK file first.";
 }
 
-//  export these functions
-export { activateTerminal, deactivateTerminal };
+export { terminal, terminalWindow, activateTerminal, deactivateTerminal };
