@@ -16,9 +16,15 @@ or the command line [ReVanced CLI](https://github.com/revanced/revanced-cli) a b
 
 - Built on Flask and Javascript.
 - Applies styles from [Tailwind CSS](https://tailwindcss.com/).
-- Requires Java SDK 11 to run [ReVanced-CLI](https://github.com/revanced/revanced-cli).
-- Currently uses patches from the [v2.186.0](https://raw.githubusercontent.com/ReVanced/revanced-patches/v2.186.0/patches.json) patches release.
-- Uses [AAPT](https://developer.android.com/tools/aapt2) to read and verify APK manifest data.
+- Currently uses ReVanced Patches [v2.186.0](https://raw.githubusercontent.com/ReVanced/revanced-patches/v2.186.0/patches.json) release.
+- Uses [AAPT](https://github.com/exconvinced/aapt) to read and verify APK manifest data.
+
+#### Prerequisites
+
+Please install [OpenJDK 11](https://jdk.java.net/archive/):
+- [Windows](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip)
+- [Mac OS](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_osx-x64_bin.tar.gz)
+- [Linux](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz)
 
 #### Preview
 
