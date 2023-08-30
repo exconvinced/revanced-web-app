@@ -11,7 +11,7 @@ REVANCED_DIR = join("bin", "revanced")
 APK_DIR = join("bin", 'apk')
 
 
-class Revanced:
+class ReVanced:
     def __init__(self):
         self.cli          = join(REVANCED_DIR, f'revanced-cli.jar')
         self.patches      = join(REVANCED_DIR, f'revanced-patches.jar')
