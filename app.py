@@ -11,16 +11,16 @@ download_filename = None
 h.remove_files_in_directory()
 
 
-@app.route("/upload", methods=['POST'])
+@app.route("/upload", methods=["POST"])
 def upload():
     global unpatched_apk, unpatched_apk_info, download_filename
 
     # Save uploaded file to temp directory
-    temp_apk = 'revanced/apk/unpatched.apk'
-    if 'file' not in request.files:
+    temp_apk = "revanced/apk/unpatched.apk"
+    if "file" not in request.files:
         return "No file part"
-    file = request.files['file']
-    if file.filename == '':
+    file = request.files["file"]
+    if file.filename == "":
         return "No selected file"
     file.save(temp_apk)
 
@@ -30,41 +30,52 @@ def upload():
         # Declare valid apk not found
         unpatched_apk = None
         unpatched_apk_info = None
-        return jsonify({'error': 'Invalid file'}), 500
+        return jsonify({"error": "Invalid file"}), 500
     else:
         # Save valid package info in memory
         unpatched_apk = temp_apk
         unpatched_apk_info = temp_apk_info
 
-        package_name = unpatched_apk_info['package_name']
-        package_version = unpatched_apk_info['package_version']
+        package_name = unpatched_apk_info["package_name"]
+        package_version = unpatched_apk_info["package_version"]
         download_filename = package_name
-        compatible_patches = list(h.get_compatible_patches(package_name, package_version))
+        compatible_patches = list(
+            h.get_compatible_patches(package_name, package_version)
+        )
 
-        data = {"package_info": unpatched_apk_info, "compatible_patches": compatible_patches}
+        data = {
+            "package_info": unpatched_apk_info,
+            "compatible_patches": compatible_patches,
+        }
 
         return jsonify(data)
-    
 
-@app.route("/send", methods=['POST'])
+
+@app.route("/send", methods=["POST"])
 def send():
     global global_data
     global_data = request.json
-    return jsonify({'result': 'success'})
+    return jsonify({"result": "success"})
 
 
 @app.route("/progress")
 def progress():
     def revanced_args():
         global global_data
-        return h.generate_revanced_args(global_data) if global_data else ''
-    return Response(h.start_revanced_patch(revanced_args()), content_type='text/event-stream')
+        return h.generate_revanced_args(global_data) if global_data else ""
+
+    return Response(
+        h.start_revanced_patch(revanced_args()), content_type="text/event-stream"
+    )
 
 
 @app.route("/download")
 def download():
-    response = send_file(h.retrieve_patched_apk(), as_attachment=True, download_name=f'{download_filename}.revanced.patched.apk')
-    print(response.headers)
+    response = send_file(
+        h.retrieve_patched_apk(),
+        as_attachment=True,
+        download_name=f"{download_filename}.revanced.patched.apk",
+    )
     return response
 
 
@@ -73,5 +84,5 @@ def dashboard():
     return render_template("index.html", package=True)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run(app.run(host="0.0.0.0"), debug=True)
