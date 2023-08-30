@@ -6,9 +6,8 @@
 #### Description:
 
 A web implementation of the popular [ReVanced](https://github.com/ReVanced)!
-Patch your Android apps on a familiar interface but now on powerful PC hardware.
-Covers those who find the mobile app [ReVanced Manager](https://github.com/revanced/revanced-manager) occasionally slow and buggy 
-or the command line [ReVanced CLI](https://github.com/revanced/revanced-cli) a bit cryptic to set up and use.
+Patch your Android apps on a familiar interface with a powerful PC hardware.
+Combines the comfortable user experience of the mobile app [ReVanced Manager](https://github.com/revanced/revanced-manager) and the efficiency of the commandline [ReVanced CLI](https://github.com/revanced/revanced-cli).
 
 [![Watch the video](./.preview/thumbnail.png)](https://youtu.be/-MK7L0JYTxU)
 
