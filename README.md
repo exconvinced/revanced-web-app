@@ -16,8 +16,11 @@ or the command line [ReVanced CLI](https://github.com/revanced/revanced-cli) a b
 
 - Built on Flask and Javascript.
 - Applies styles from [Tailwind CSS](https://tailwindcss.com/).
-- Currently uses ReVanced Patches [v2.186.0](https://raw.githubusercontent.com/ReVanced/revanced-patches/v2.186.0/patches.json) release.
 - Uses [AAPT](https://github.com/exconvinced/aapt) to read and verify APK manifest data.
+- Runs [ReVanced](https://github.com/ReVanced) with the following components:
+  - ReVanced CLI [v2.22.0](https://github.com/ReVanced/revanced-cli/releases/tag/v2.22.0)
+  - ReVanced Patches [v2.187.0](https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0)
+  - ReVanced Integrations [v0.117.0](https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0)
 
 #### Prerequisites
 
