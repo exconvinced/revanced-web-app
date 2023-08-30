@@ -1,5 +1,6 @@
 import os, re, sys, json
 import subprocess as sp
+from scripts.aapt import APK
 
 
 revanced_cli = os.path.join("bin", "revanced", 'revanced-cli-2.22.0.jar')
@@ -8,7 +9,7 @@ revanced_patches = os.path.join("bin", "revanced", 'revanced-patches-2.187.0.jar
 revanced_patches_json = os.path.join("bin", "revanced", 'revanced-patches-2.187.0.json')
 revanced_integrations = os.path.join("bin", "revanced", 'revanced-integrations-0.117.0.apk')
 
-aapt = os.path.join("bin", 'aapt', 'aapt_64.exe')
+# aapt = os.path.join("bin", 'aapt', 'aapt_64.exe')
 
 if not os.path.exists(os.path.join("bin", 'apk')):
     os.makedirs(os.path.join("bin", 'apk'))
@@ -21,7 +22,7 @@ with open(revanced_patches_json, 'r') as f:
     patches_json = json.load(f)
 
 
-def get_all_app_versions(package_name) -> list:
+def get_latest_app_version(package_name) -> list:
     """
     Return all compatible app versions for a given package name
     """
@@ -29,7 +30,7 @@ def get_all_app_versions(package_name) -> list:
         return tuple(map(int, (version.split("."))))
     versions = set(version for patch in patches_json for package in patch['compatiblePackages'] if package['name'] == package_name for version in package['versions'])
     try:
-        return sorted(versions, key=version_key)
+        return sorted(versions, key=version_key, reverse=True)[0]
     except:
         return 'Any'
 
@@ -88,35 +89,18 @@ def data_stream(string) -> str:
     return 'data:' + string.rstrip() + '\n\n'
 
 
-
 def read_apk_file(file):
     """
     Return package name, version and label of an APK file
     """
+    apk = APK(file)
     try:
-        aapt_command = [aapt, 'dump', 'badging', file]
-        aapt_output_bytes = sp.check_output(aapt_command)
-        aapt_output = aapt_output_bytes.decode('utf-8')
-
-        for line in aapt_output.splitlines():
-            if line.startswith('package:'):
-                package_name = re.search(r"name='(.+?)'", line).group(1)
-                package_version = re.search(r"versionName='(.+?)'", line).group(1)
-                package_version = package_version if package_version else 'Any'
-            elif line.startswith('application-label:'):
-                app_label = line.split(':')[1].strip("'")
-
-        try:
-            recommended_version = get_all_app_versions(package_name)[-1]
-        except:
-            recommended_version = 'Any'
-
         apk_info = {
-            'package_name': package_name, 
-            'package_version': package_version, 
-            'recommended_version': recommended_version, 
-            'app_label': app_label
-            }
+            'package_name': apk.package_name,
+            'package_version': apk.version_name,
+            'recommended_version': get_latest_app_version(apk.package_name), 
+            'app_label': apk.app_label
+        }
         return apk_info
     except:
         return None
