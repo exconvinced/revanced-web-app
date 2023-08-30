@@ -18,7 +18,7 @@ launch.bat
 static/unused/*
 templates/unused/*
 /bin/**
-/helper/aapt/**
+/helper/aapt
 test.py
 scripts/aapt.py
 scripts/bin/darwin/aapt_64
