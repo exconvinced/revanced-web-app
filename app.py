@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, Response, jsonify, send_file
 import helper as h
+from flask import Flask, render_template, request, Response, jsonify, send_file
+import sys
 
 app = Flask(__name__)
 global_data = None
@@ -84,5 +85,12 @@ def dashboard():
     return render_template("index.html")
 
 
-if __name__ == "__main__":
-    app.run(app.run(host="0.0.0.0"), debug=True)
+
+if h.is_java_sdk_installed():
+    if __name__ == "__main__":
+        print("hello")
+        app.run(host="0.0.0.0")
+else:
+    print("Java SDK 11 not found. Please install and try again.")
+    print(h.get_jdk_url())
+    sys.exit("Exiting...")
