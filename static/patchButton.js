@@ -11,7 +11,10 @@ function enablePatchButton(text) {
     patchButton.disabled = false;
     // if text not empty, set text
     if (text) {
-        patchButton.textContent = text;
+        patchButton.innerHTML = text;
+    }
+    else {
+        patchButton.innerHTML = initialPatchButtonText;
     };
 }
 
@@ -20,7 +23,10 @@ function disablePatchButton(text) {
     patchButton.disabled = true;
     // if text not empty, set text
     if (text) {
-        patchButton.textContent = text;
+        patchButton.innerHTML = text;
+    }
+    else {
+        patchButton.innerHTML = initialPatchButtonText;
     };
 }
 
