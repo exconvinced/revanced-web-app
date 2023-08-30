@@ -30,7 +30,7 @@ def get_latest_app_version(package_name) -> list:
         return tuple(map(int, (version.split("."))))
     versions = set(version for patch in patches_json for package in patch['compatiblePackages'] if package['name'] == package_name for version in package['versions'])
     try:
-        return sorted(versions, key=version_key, reverse=True)[0]
+        return sorted(versions, key=version_key)[-1]
     except:
         return 'Any'
 
