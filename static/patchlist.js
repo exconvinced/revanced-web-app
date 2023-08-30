@@ -5,6 +5,7 @@ const selectedPatchesCount = document.getElementById('selected-patches-count')
 const selectedPatchesList = document.getElementById('selected-patches-list')
 const selectedApp = document.getElementById('selected-application');
 const patches = document.getElementById('patches');
+const uploadButton = document.getElementById('upload-button');
 let checkCount = 0;
 
 
@@ -42,6 +43,7 @@ function beginPatch() {
             console.error('Error:', error);
         });
 };
+
 
 function loadPackageInfo(data) {
     selectedApp.classList.remove('disabled-button')
@@ -150,6 +152,7 @@ function loadPatchesCheckbox(data) {
             </button>
             `
         }
+        
     const checkBoxButtons = patches.querySelectorAll('.patch-checkbox-button')
     checkBoxButtons.forEach(checkBoxButton => {
         let checkbox = checkBoxButton.querySelector('.patch-checkbox');
@@ -191,5 +194,19 @@ function resetPatchesCheckbox() {
     patches.classList.add('disabled-button')
 }
 
+function enablePanels() {
+    patches.classList.remove('disabled-button')
+    selectedPatches.classList.remove('disabled-button')
+    uploadButton.classList.remove('disabled-button')
+    selectedApp.classList.remove('disabled-button')
+}
+function disablePanels() {
+    patches.classList.add('disabled-button')
+    selectedPatches.classList.add('disabled-button')
+    uploadButton.classList.add('disabled-button')
+    selectedApp.classList.add('disabled-button')
+}
 
-export { loadPackageInfo, resetPackageInfo, loadSelectedPatchesList, resetSelectedPatchesList, loadPatchesCheckbox, resetPatchesCheckbox, beginPatch }
+
+
+export { loadPackageInfo, resetPackageInfo, loadSelectedPatchesList, resetSelectedPatchesList, loadPatchesCheckbox, resetPatchesCheckbox, beginPatch, enablePanels, disablePanels }

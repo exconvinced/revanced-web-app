@@ -2,10 +2,12 @@ import { patchButton, resetPatchButton, enablePatchButton, disablePatchButton } 
 import { hideDownloadButton, showDownloadButton, clickDownloadButton } from "./downloadButton.js";
 import { terminal, terminalWindow } from "./terminal.js";
 import { beginPatch } from "./patchList.js";
+import { enablePanels, disablePanels } from "./patchList.js";
 
 document.addEventListener('DOMContentLoaded', function() {
     patchButton.addEventListener('click', function() {
         beginPatch();
+        disablePanels();
         disablePatchButton('Patching...');
         hideDownloadButton();
 
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hideDownloadButton();
                 resetPatchButton();
                 disablePatchButton('Patch failed!');
+                enablePanels();
                 eventSource.close();
                 data.data = data.error
             }
@@ -33,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
             resetPatchButton();
             showDownloadButton();
             clickDownloadButton();
+            enablePanels();
             console.log("Downloading patched APK...")
         };
     });
