@@ -1,11 +1,19 @@
+# Ignore cache
 __pycache__/*
 revanced-cache/*
-revanced/*
+
+# Ignore ReVanced dependencies
+revanced-cli*.jar
+revanced-patches*.jar
+revanced-patches*.json
+revanced-integrations*.apk
+revanced-cli*.jar
+patches*.jar
+patches*.json
+integrations*.apk
 options.json
+
+# Ignore stuff
 launch.bat
-static/unused/checkbox.js
-static/unused/patch_button.js
-static/unused/patches.js
-static/unused/process.js
-templates/unused/patchlistcheckbox.html
-templates/unused/selected_patches.html
+static/unused/*
+templates/unused/*
