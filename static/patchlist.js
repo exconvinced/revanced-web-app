@@ -1,3 +1,5 @@
+import { enablePatchButton, disablePatchButton } from "./patchButton.js";
+
 const selectedPatches = document.getElementById('selected-patches')
 const selectedPatchesCount = document.getElementById('selected-patches-count')
 const selectedPatchesList = document.getElementById('selected-patches-list')
@@ -162,6 +164,7 @@ function loadPatchesCheckbox(data) {
         checkBoxButton.addEventListener('click', function () {
             toggleCheckbox(checkbox);
             updateSelectedPatchesList(this);
+            enablePatchButton();
 
             if (checkbox.checked) {
                 included_patches.push(checkbox.name);
