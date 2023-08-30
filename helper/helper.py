@@ -1,8 +1,8 @@
 import os, sys, json
 import subprocess as sp
 from helper.aapt import APK
-from scripts.revanced import Revanced as rv
-from scripts.revanced import REVANCED_DIR, APK_DIR
+from helper.revanced import Revanced as rv
+from helper.revanced import REVANCED_DIR, APK_DIR
 
 
 with open(rv.patches_json, 'r') as f:
