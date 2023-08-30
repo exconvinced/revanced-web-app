@@ -1,6 +1,6 @@
 import helper as h
 from flask import Flask, render_template, request, Response, jsonify, send_file
-import sys
+
 
 app = Flask(__name__)
 global_data = None
@@ -93,4 +93,4 @@ if h.is_java_sdk_installed():
 else:
     print("Java SDK 11 not found. Please install and try again.")
     print(h.get_jdk_url())
-    sys.exit("Exiting...")
+    exit("Exiting...")
