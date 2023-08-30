@@ -17,4 +17,6 @@ options.json
 launch.bat
 static/unused/*
 templates/unused/*
-bin/*
+**/bin/**
+test.py
+scripts/aapt.py
