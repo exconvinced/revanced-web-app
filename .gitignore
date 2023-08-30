@@ -1,6 +1,6 @@
 # Ignore cache
-__pycache__/*
-revanced-cache/*
+**/__pycache__/**
+**/revanced-cache/**
 
 # Ignore ReVanced dependencies
 revanced-cli*.jar
@@ -17,3 +17,4 @@ options.json
 launch.bat
 static/unused/*
 templates/unused/*
+bin/*
