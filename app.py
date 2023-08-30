@@ -1,4 +1,4 @@
-import helper as h
+import scripts.helper as h
 from flask import Flask, render_template, request, Response, jsonify, send_file
 
 
@@ -17,7 +17,7 @@ def upload():
     global unpatched_apk, unpatched_apk_info, download_filename
 
     # Save uploaded file to temp directory
-    temp_apk = "revanced/apk/unpatched.apk"
+    temp_apk = "bin/apk/unpatched.apk"
     if "file" not in request.files:
         return "No file part"
     file = request.files["file"]
