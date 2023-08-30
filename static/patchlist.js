@@ -1,9 +1,8 @@
 const selectedPatches = document.getElementById('selected-patches')
 const selectedPatchesCount = document.getElementById('selected-patches-count')
 const selectedPatchesList = document.getElementById('selected-patches-list')
-const patches = document.getElementById('patches');
-const patchButton = document.getElementById('patch-button');
 const selectedApp = document.getElementById('selected-application');
+const patches = document.getElementById('patches');
 let checkCount = 0;
 
 
@@ -41,22 +40,6 @@ function beginPatch() {
             console.error('Error:', error);
         });
 };
-
-patchButton.addEventListener('click', function () {
-    beginPatch()
-});
-
-
-
-function disablePatchButton() {
-    patchButton.disabled = true;
-    patchButton.classList.add('disabled-button');
-}
-
-function enablePatchButton() {
-    patchButton.disabled = false;
-    patchButton.classList.remove('disabled-button');
-}
 
 function loadPackageInfo(data) {
     selectedApp.classList.remove('disabled-button')
@@ -125,7 +108,6 @@ function updateSelectedPatchesList(element) {
     }
 }
 
-
 function toggleCheckbox(box) {
     box.checked = !box.checked;
 
@@ -137,7 +119,6 @@ function toggleCheckbox(box) {
     }
     updatePatchesCount()
 };
-
 
 function loadPatchesCheckbox(data) {
     patches.classList.remove('disabled-button')
@@ -208,4 +189,4 @@ function resetPatchesCheckbox() {
 }
 
 
-export { disablePatchButton, enablePatchButton, loadPackageInfo, resetPackageInfo, loadSelectedPatchesList, resetSelectedPatchesList, loadPatchesCheckbox, resetPatchesCheckbox }
+export { loadPackageInfo, resetPackageInfo, loadSelectedPatchesList, resetSelectedPatchesList, loadPatchesCheckbox, resetPatchesCheckbox, beginPatch }
