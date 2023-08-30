@@ -24,7 +24,7 @@ or the command line [ReVanced CLI](https://github.com/revanced/revanced-cli) a b
 
 Full layout             |  Mobile layout
 :-------------------------:|:-------------------------:
-![image](./preview/full_new.png)  |  ![image](./preview/mobile.png)
+![image](./.preview/full_new.png)  |  ![image](./.preview/mobile.png)
 
 <!-- #### Prerequisites
 Download [Java SDK 11.0.2](https://jdk.java.net/archive/). 
