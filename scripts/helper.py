@@ -1,37 +1,25 @@
 import os, re, sys, json
 import subprocess as sp
-import requests
 
 
-revanced_dir = 'revanced'
-database = os.path.join('static', 'packages.db')
+revanced_cli = os.path.join("bin", "revanced", 'revanced-cli-2.22.0.jar')
+revanced_options = os.path.join("bin", "revanced", 'revanced-options.json')
+revanced_patches = os.path.join("bin", "revanced", 'revanced-patches-2.187.0.jar')
+revanced_patches_json = os.path.join("bin", "revanced", 'revanced-patches-2.187.0.json')
+revanced_integrations = os.path.join("bin", "revanced", 'revanced-integrations-0.117.0.apk')
 
-java = os.path.join(revanced_dir, 'jdk', 'bin', 'java.exe')
-revanced_cli = os.path.join(revanced_dir, 'revanced-cli.jar')
-dependencies_dir = os.path.join(revanced_dir, 'dependencies')
-patches = os.path.join(dependencies_dir, 'patches.jar')
-integrations = os.path.join(dependencies_dir, 'integrations.apk')
+aapt = os.path.join("bin", 'aapt', 'aapt_64.exe')
 
-aapt = os.path.join(revanced_dir, 'aapt', 'aapt_64.exe')
-apk_directory = os.path.join(revanced_dir, 'apk')
+if not os.path.exists(os.path.join("bin", 'apk')):
+    os.makedirs(os.path.join("bin", 'apk'))
+
+apk_directory = os.path.join("bin", 'apk')
 unpatched_apk = os.path.join(apk_directory, 'unpatched.apk')
 patched_apk = os.path.join(apk_directory, 'patched.apk')
 
+with open(revanced_patches_json, 'r') as f:
+    patches_json = json.load(f)
 
-def get_revanced_patches_json() -> dict:
-    """
-    Download ReVanced patches.json
-    """
-    url = "https://raw.githubusercontent.com/ReVanced/revanced-patches/v2.186.0/patches.json"
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        return json.loads(response.text)
-    else:
-        print("Failed to fetch the JSON data. Status code:", response.status_code)
-        return None
-
-patches_json = get_revanced_patches_json()
 
 def get_all_app_versions(package_name) -> list:
     """
@@ -169,7 +157,7 @@ def start_revanced_patch(args):
         yield data_stream(json.dumps({'error': error}))
         return
     
-    command = ["java", '-jar', revanced_cli, '-a', unpatched_apk, '-o', patched_apk, '-b', patches, '-m', integrations] + args.split()
+    command = ["java", '-jar', revanced_cli, '-a', unpatched_apk, '-o', patched_apk, '-b', revanced_patches, '-m', revanced_integrations, '--options', revanced_options] + args.split()
 
     process = sp.Popen(command, stdout=sp.PIPE, stderr=sp.STDOUT, text=True)
     for line in process.stdout: # Print both output and error messages
