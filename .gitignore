@@ -7,3 +7,5 @@ static/unused/checkbox.js
 static/unused/patch_button.js
 static/unused/patches.js
 static/unused/process.js
+templates/unused/patchlistcheckbox.html
+templates/unused/selected_patches.html
