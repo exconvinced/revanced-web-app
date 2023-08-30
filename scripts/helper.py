@@ -1,4 +1,4 @@
-import os, re, sys, json
+import os, sys, json
 import subprocess as sp
 from scripts.aapt import APK
 
