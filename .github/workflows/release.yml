@@ -4,6 +4,12 @@ on:
   push:
     branches: 
     - master
+    paths:
+    - '**/*' # Trigger on any file change except the following
+    - '!README.md'
+    - '!.preview/*'
+    - '!.github/*'
+    - '!LICENSE'
 
 permissions:
   contents: write
@@ -30,7 +36,6 @@ jobs:
     - name: Download project requirements
       run: |
         pip install requests  
-        python .scripts/requirements.py
 
     - name: Create zip archive
       run: python .scripts/zip.py $RELEASE_FILENAME
