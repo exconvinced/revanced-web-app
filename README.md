@@ -1,17 +1,20 @@
-# ReVanced Web App
-### 📢 Test release is [here](https://github.com/exconvinced/revanced-web-app/releases/tag/v0.0.0-dev)!
+[![Watch the video](./.preview/banner.png)](https://youtu.be/-MK7L0JYTxU)
 
-#### Video Demo:  [ReVanced Web App](https://youtu.be/-MK7L0JYTxU)
-
-#### Description:
-
-A web implementation of the popular [ReVanced](https://github.com/ReVanced)!
+<p align="center">
+A web implementation of the popular <a href="https://github.com/ReVanced"><b>ReVanced</b></a>! <br>
 Patch your Android apps on a familiar interface with a powerful PC hardware.
-Combines the comfortable user experience of the mobile app [ReVanced Manager](https://github.com/revanced/revanced-manager) and the efficiency of the commandline [ReVanced CLI](https://github.com/revanced/revanced-cli).
+<br><br>
+<small>
+    <i>Watch video demo <a href="https://youtu.be/-MK7L0JYTxU">here</a></i>
+</small>
 
-[![Watch the video](./.preview/thumbnail.png)](https://youtu.be/-MK7L0JYTxU)
+</p>
 
-#### Specifications
+### ⏬ Download
+**https://github.com/exconvinced/revanced-web-app/releases/latest**
+
+
+### 🔧 Specifications
 
 - Built on Flask and Javascript.
 - Follows [Tailwind CSS](https://tailwindcss.com/) styling convention.
@@ -21,25 +24,24 @@ Combines the comfortable user experience of the mobile app [ReVanced Manager](ht
   - ReVanced Patches [v2.187.0](https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0)
   - ReVanced Integrations [v0.117.0](https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0)
 
-#### Prerequisites
+### ✅ Prerequisites
 - [Python 3](https://www.python.org/downloads/release/python-3106/)
 - [OpenJDK 11](https://jdk.java.net/archive/)
 
-#### Preview
+### 🖥️ Usage
+After installing [Python 3](https://www.python.org/downloads/release/python-3106/) and [OpenJDK 11](https://jdk.java.net/archive/), simply run `launcher.bat` for Windows or `launcher.sh` for Mac OS and Linux.
 
-![image](./.preview/demo.gif)
+### 👀 Preview
 
-Full layout             |  Mobile layout
-:-------------------------:|:-------------------------:
-![image](./.preview/full_new.png)  |  ![image](./.preview/mobile.png)
+<!-- <img width="76%" alt="ReVanced Manager application displayed on a hand-held device" src="./.preview/demo.gif"/>
+<img width="21%" src="./.preview/demo-mobile.gif" /> -->
 
-
-<!-- #### Prerequisites
-Download [Java SDK 11.0.2](https://jdk.java.net/archive/). 
-Finally, extract it into `/revanced` directory, then rename the extracted folder as `jdk`.
-The complete path for Java should now be `/revanced/jdk/bin/java.exe`. -->
+| 🖥️ Desktop | 📱 Mobile |
+|:-:|:-:|
+| ![image](./.preview/demo.gif) | ![image](./.preview/demo-mobile.gif) |
 
 
+---
 #### Disclaimer
 This is not an official app. This app simply utilizes ReVanced in the backend.
 
