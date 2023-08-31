@@ -74,24 +74,38 @@
         </em>
 </div>
 <br>&nbsp;
+<br>&nbsp;
 
 
-#### Disclaimer
-This is not an official app. This app simply utilizes ReVanced in the backend.
-
-#### Motivation
-
-The mobile app is occasionally buggy and slow on some devices,
-e.g. the patch process eventually freezes especially upon leaving and returning to the app. 
-The CLI option is versatile but non-techy people may find it hard to set up and use.
-This project combines the accessibility of the mobile app and the efficiency of CLI.
-
-<details>
-<summary><h5>Dedication to CS50</h5></summary>
-  I needed to build something for the <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50</a> final project.
-  I completed this project in 3 days, thanks to ChatGPT for helping me troubleshoot errors.
-  This is relatively easier than solving the Tideman problem set!
-  <br><br>
-  I learned a lot about the communication logic between `app.routes` in Flask and `event.sources` in Javascript. 
-  I should study proper coding paradigms for writing cleaner code for my next project.
-</details>
+<div align="center">
+    <h3>
+        Motivation
+    </h3>
+</div>
+<div align="center">
+    This project combines the familiar user experience of the mobile app
+    and the stability of the CLI, giving you the best of both worlds, 
+    and potentially saving you time from troubleshooting errors.
+</div>
+<br>&nbsp;
+<div align="center">
+    <h3>
+        Dedication
+    </h3>
+</div>
+<div align="center">
+    ReVanced Web App was initially my final project for <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50x</a>.
+    Driven by the stellar learning experience provided by the course, 
+    I was able to complete first working web app sooner than expected.
+    <br><br>
+    Never once in my life have I genuinely enjoyed an online course. In fact, I would definitely recommend the CS50 series to anyone for the sake of attending Professor Malan's lectures!
+</div>
+<br>&nbsp;
+<div align="center">
+    <h3>
+        Appreciation 
+    </h3>
+</div>
+<div align="center">
+    I couldn't have been any happier! This project has reached the radar of the ReVanced team and stargazers, receiving their blessings. You lots prevented this project from going stale. More commits to come!
+</div>
