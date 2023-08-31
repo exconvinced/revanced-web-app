@@ -1,4 +1,4 @@
-name: Release ReVanced Web App
+name: Release ReVanced Web App Test
 
 on:
   push:
