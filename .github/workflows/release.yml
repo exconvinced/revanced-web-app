@@ -30,8 +30,11 @@ jobs:
     - name: Install Python venv
       run: python -m venv venv
 
+    - name: Activate venv
+      run: source venv/bin/activate
+
     - name: Install requests
-      run: pip install requests
+      run: pip install -r .scripts/requirements.txt
 
     - name: Download project requirements
       run: python .scripts/requirements.py
