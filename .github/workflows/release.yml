@@ -45,7 +45,7 @@ jobs:
     - name: Add zip to filename
       run: |
         echo "Original RELEASE_FILENAME: $RELEASE_FILENAME"
-        RELEASE_FILENAME="$RELEASE_FILENAME.zip"
+        RELEASE_FILENAME="${RELEASE_FILENAME}.zip"
         echo "Updated RELEASE_FILENAME: $RELEASE_FILENAME"
 
     - name: Create GitHub Release
