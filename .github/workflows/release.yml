@@ -17,7 +17,6 @@ permissions:
 jobs:
   download-requirements:
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, '[ci]')"
 
     env:
       RELEASE_TAG: "v0.0.0-dev"
