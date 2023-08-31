@@ -1,56 +1,81 @@
 [![Watch the video](./.preview/banner.png)](https://youtu.be/-MK7L0JYTxU)
 
-<p align="center">
-  A web implementation of the popular <a href="https://github.com/ReVanced"><b>ReVanced</b></a>! 
-  <br>
-  Patch your apps on a familiar interface, now on powerful PC hardware.
-  <br>
-  Built with Flask and Javascript.
-</p>
-<h6 align="center">
-    <i>Watch video demo <a href="https://youtu.be/-MK7L0JYTxU">here</a></i>
-</h6>
+<div align="center">
+    A web implementation of the popular
+    <a href="https://github.com/ReVanced">
+        <b>ReVanced</b>
+    </a>!
+    <br> Patch your apps on a familiar interface, now on powerful PC hardware.
+    <br> Built with Flask and Javascript.
+</div>
+
+<br>&nbsp;
+
+<div align="center">
+    <h3>
+        ✨ Download test release:
+        <a href="https://github.com/exconvinced/revanced-web-app/releases/latest">
+            v0.0.0-dev
+        </a>
+    </h3>
+</div>
+<div align="center">
+    <em>
+        Prerequisites:
+        <a href="https://www.python.org/downloads/release/python-3106/">
+            Python 3
+        </a>,
+        <a href="https://jdk.java.net/archive/">OpenJDK 11</a>
+        <br>
+        Usage:
+        Run <code>launcher.bat</code> or <code>launcher.sh</code>
+    </em>
+</div>
+
+<br>&nbsp;
+
+<div align="center">
+    <h3>
+        ReVanced components in use
+    </h3>
+</div>
+<div align="center">
+    <samp>cli</samp> 
+    <a href="https://github.com/ReVanced/revanced-cli/releases/tag/v2.22.0">
+        <b>v2.22.0</b>
+    </a>
+    &nbsp;
+    <samp>patches</samp> 
+    <a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0">
+        <b>v2.187.0</b>
+    </a>
+    &nbsp;
+    <samp>integrations</samp> 
+    <a href="https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0">
+        <b>v0.117.0</b>
+    </a>
+</div>
+
+<br>&nbsp;
+
+<div align="center">
+    <a href="https://youtu.be/dQw4w9WgXcQ">
+        <img width="76%" src="./.preview/demo.gif" alt="image"/>
+    </a>
+    <a width="10vw" href="https://youtu.be/DfEnIFV2-mc">
+        <img width="22%" src="./.preview/demo-mobile.gif" alt="image"/>
+    </a>
+</div>
+
+<div align="center">
+        <em>
+            Watch video demo
+            <a href="https://youtu.be/-MK7L0JYTxU">here</a>
+        </em>
+</div>
+<br>&nbsp;
 
 
-<h4 align="center">
-  <br>
-  ✨ Download test release: 
-  <a href="https://github.com/exconvinced/revanced-web-app/releases/latest"><b>v0.0.0-dev</b></a>
-</h4>
-
-<p align="center">
-  <small><i>
-      Prerequisites:
-      <a href="https://www.python.org/downloads/release/python-3106/">Python 3</a>,
-      <a href="https://jdk.java.net/archive/">OpenJDK 11</a>
-      <br>
-      Usage:
-      Run <code>launcher.bat</code> or <code>launcher.sh</code>
-  </i></small>
-</p>
-
-  <br>
-<h4 align="center">ReVanced components currently in use</h4>
-<p align="center">
-  CLI <a href="https://github.com/ReVanced/revanced-cli/releases/tag/v2.22.0"><b>v2.22.0</b></a>
-  &nbsp;
-  &nbsp;
-  Patches <a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0"><b>v2.187.0</b></a>
-  &nbsp;
-  &nbsp;
-  Integrations <a href="https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0"><b>v0.117.0</b></a>
-  <br>
-  <br>
-</p>
-
-<h4 align="center">Preview</h4>
-
-
-| 🖥️ Desktop | 📱 Mobile |
-|:-|:-|
-| [![image](./.preview/demo.gif)](https://youtu.be/dQw4w9WgXcQ) | [![image](./.preview/demo-mobile.gif)](https://youtu.be/DfEnIFV2-mc) |
-
----
 #### Disclaimer
 This is not an official app. This app simply utilizes ReVanced in the backend.
 
