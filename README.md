@@ -22,11 +22,8 @@ Combines the comfortable user experience of the mobile app [ReVanced Manager](ht
   - ReVanced Integrations [v0.117.0](https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0)
 
 #### Prerequisites
-
-Please install [OpenJDK 11](https://jdk.java.net/archive/):
-- [Windows](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_windows-x64_bin.zip)
-- [Mac OS](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_osx-x64_bin.tar.gz)
-- [Linux](https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz)
+- [Python 3](https://www.python.org/downloads/release/python-3106/)
+- [OpenJDK 11](https://jdk.java.net/archive/)
 
 #### Preview
 
