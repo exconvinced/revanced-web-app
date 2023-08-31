@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, Response, jsonify, send_file
+from flask import Flask, render_template, request, Response, jsonify, send_file, url_for
 import helper.helper as h
 import logging
 
@@ -92,8 +92,9 @@ def dashboard():
 
 if h.is_java_sdk_installed():
     if __name__ == "__main__":
-        print("ReVanced Web App is running...")
         app.run()
+        with app.test_request_context():
+            print("URL for 'home' route:", url_for('home'))
 
 
 else:
