@@ -31,31 +31,24 @@
 
   <br>
 <h4 align="center">ReVanced components currently in use</h4>
-
-<table align="center">
-    <tr>
-        <td >ReVanced CLI</td>
-        <td ><a href="https://github.com/ReVanced/revanced-cli/releases/tag/v2.22.0"><b>v2.22.0</b></a></td>
-    </tr>
-    <tr>
-        <td >ReVanced Patches</td>
-        <td ><a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0"><b>v2.187.0</b></a></td>
-    </tr>
-    <tr>
-        <td >ReVanced Integrations</td>
-        <td ><a href="https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0"><b>v0.117.0</b></a></td>
-    </tr>
-</table>
+<p align="center">
+  CLI <a href="https://github.com/ReVanced/revanced-cli/releases/tag/v2.22.0"><b>v2.22.0</b></a>
+  &nbsp;
+  &nbsp;
+  Patches <a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0"><b>v2.187.0</b></a>
+  &nbsp;
+  &nbsp;
+  Integrations <a href="https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0"><b>v0.117.0</b></a>
+  <br>
+  <br>
+</p>
 
 <h4 align="center">Preview</h4>
 
-<!-- <img width="76%" alt="ReVanced Manager application displayed on a hand-held device" src="./.preview/demo.gif"/>
-<img width="21%" src="./.preview/demo-mobile.gif" /> -->
 
 | 🖥️ Desktop | 📱 Mobile |
 |:-|:-|
 | [![image](./.preview/demo.gif)](https://youtu.be/dQw4w9WgXcQ) | [![image](./.preview/demo-mobile.gif)](https://youtu.be/DfEnIFV2-mc) |
-
 
 ---
 #### Disclaimer
