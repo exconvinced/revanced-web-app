@@ -1,35 +1,57 @@
 [![Watch the video](./.preview/banner.png)](https://youtu.be/-MK7L0JYTxU)
 
 <p align="center">
-A web implementation of the popular <a href="https://github.com/ReVanced"><b>ReVanced</b></a>! <br>
-Patch your Android apps on a familiar interface with a powerful PC hardware.
-<br><br>
-<small>
-    <i>Watch video demo <a href="https://youtu.be/-MK7L0JYTxU">here</a></i>
-</small>
-
+  A web implementation of the popular <a href="https://github.com/ReVanced"><b>ReVanced</b></a>! 
+  <br>
+  Patch your apps on a familiar interface and powerful PC hardware.
+  <br>
+  Built on Flask and Javascript
+  <br>
+  <br>
+  <small>
+      <i>Watch video demo <a href="https://youtu.be/-MK7L0JYTxU">here</a></i>
+  </small>
 </p>
 
-### ⏬ Download
-**https://github.com/exconvinced/revanced-web-app/releases/latest**
+
+<h4 align="center">
+  <br>
+  ✨ Download test release: 
+  <a href="https://github.com/exconvinced/revanced-web-app/releases/latest"><b>v0.0.0-dev</b></a>
+  <br>
+  <br>
+</h4>
+
+<h4 align="center">ReVanced components</h4>
+
+<table align="center">
+    <tr>
+        <td >ReVanced CLI</td>
+        <td ><a href="https://github.com/ReVanced/revanced-cli/releases/tag/v2.22.0"><b>v2.22.0</b></a></td>
+    </tr>
+    <tr>
+        <td >ReVanced Patches</td>
+        <td ><a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0"><b>v2.187.0</b></a></td>
+    </tr>
+    <tr>
+        <td >ReVanced Integrations</td>
+        <td ><a href="https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0"><b>v0.117.0</b></a></td>
+    </tr>
+</table>
 
 
-### 🔧 Specifications
+<h4 align="center">
+  <br>
+  Prerequisites: 
+  <a href="https://www.python.org/downloads/release/python-3106/">Python 3</a>,
+  <a href="https://jdk.java.net/archive/">OpenJDK 11</a>
+  <br>
+  <br>
+</h4>
 
-- Built on Flask and Javascript.
-- Follows [Tailwind CSS](https://tailwindcss.com/) styling convention.
-- Uses [AAPT](https://github.com/exconvinced/aapt) to read and verify APK manifest data.
-- Runs [ReVanced](https://github.com/ReVanced) locally with the following components:
-  - ReVanced CLI [v2.22.0](https://github.com/ReVanced/revanced-cli/releases/tag/v2.22.0)
-  - ReVanced Patches [v2.187.0](https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0)
-  - ReVanced Integrations [v0.117.0](https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0)
-
-### ✅ Prerequisites
-- [Python 3](https://www.python.org/downloads/release/python-3106/)
-- [OpenJDK 11](https://jdk.java.net/archive/)
 
 ### 🖥️ Usage
-After installing [Python 3](https://www.python.org/downloads/release/python-3106/) and [OpenJDK 11](https://jdk.java.net/archive/), simply run `launcher.bat` for Windows or `launcher.sh` for Mac OS and Linux.
+Run `launcher.bat` for Windows or `launcher.sh` for Mac OS and Linux.
 
 ### 👀 Preview
 
@@ -38,7 +60,7 @@ After installing [Python 3](https://www.python.org/downloads/release/python-3106
 
 | 🖥️ Desktop | 📱 Mobile |
 |:-:|:-:|
-| ![image](./.preview/demo.gif) | ![image](./.preview/demo-mobile.gif) |
+| [![image](./.preview/demo.gif)](https://youtu.be/dQw4w9WgXcQ) | [![image](./.preview/demo-mobile.gif)](https://youtu.be/DfEnIFV2-mc) |
 
 
 ---
