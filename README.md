@@ -6,23 +6,31 @@
   Patch your apps on a familiar interface, now on powerful PC hardware.
   <br>
   Built on Flask and Javascript.
-  <br>
-  <br>
-  <small>
-      <i>Watch video demo <a href="https://youtu.be/-MK7L0JYTxU">here</a></i>
-  </small>
 </p>
+<h6 align="center">
+    <i>Watch video demo <a href="https://youtu.be/-MK7L0JYTxU">here</a></i>
+</h6>
 
 
 <h4 align="center">
   <br>
   ✨ Download test release: 
   <a href="https://github.com/exconvinced/revanced-web-app/releases/latest"><b>v0.0.0-dev</b></a>
-  <br>
-  <br>
 </h4>
 
-<h4 align="center">ReVanced components</h4>
+<p align="center">
+  <small><i>
+      Prerequisites:
+      <a href="https://www.python.org/downloads/release/python-3106/">Python 3</a>,
+      <a href="https://jdk.java.net/archive/">OpenJDK 11</a>
+      <br>
+      Usage:
+      Run <code>launcher.bat</code> or <code>launcher.sh</code>
+  </i></small>
+</p>
+
+  <br>
+<h4 align="center">ReVanced components currently in use</h4>
 
 <table align="center">
     <tr>
@@ -39,27 +47,13 @@
     </tr>
 </table>
 
-
-<h4 align="center">
-  <br>
-  Prerequisites: 
-  <a href="https://www.python.org/downloads/release/python-3106/">Python 3</a>,
-  <a href="https://jdk.java.net/archive/">OpenJDK 11</a>
-  <br>
-  <br>
-</h4>
-
-
-### 🖥️ Usage
-Run `launcher.bat` for Windows or `launcher.sh` for Mac OS and Linux.
-
-### 👀 Preview
+<h4 align="center">Preview</h4>
 
 <!-- <img width="76%" alt="ReVanced Manager application displayed on a hand-held device" src="./.preview/demo.gif"/>
 <img width="21%" src="./.preview/demo-mobile.gif" /> -->
 
 | 🖥️ Desktop | 📱 Mobile |
-|:-:|:-:|
+|:-|:-|
 | [![image](./.preview/demo.gif)](https://youtu.be/dQw4w9WgXcQ) | [![image](./.preview/demo-mobile.gif)](https://youtu.be/DfEnIFV2-mc) |
 
 
