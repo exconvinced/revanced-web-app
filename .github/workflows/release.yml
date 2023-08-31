@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      RELEASE_TAG: "revanced-web-app-test-release"
+      RELEASE_TAG: "v0.0.0-dev"
       RELEASE_FILENAME: "revanced-web-app"
 
     steps:
