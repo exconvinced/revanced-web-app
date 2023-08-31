@@ -1,8 +1,12 @@
-import helper.helper as h
 from flask import Flask, render_template, request, Response, jsonify, send_file
+import helper.helper as h
+import logging
 
 
 app = Flask(__name__)
+log = logging.getLogger('werkzeug')
+log.setLevel(logging.ERROR)
+
 global_data = None
 unpatched_apk = None
 unpatched_apk_info = None
@@ -88,8 +92,10 @@ def dashboard():
 
 if h.is_java_sdk_installed():
     if __name__ == "__main__":
-        print("hello")
-        app.run(host="0.0.0.0")
+        print("ReVanced Web App is running...")
+        app.run()
+
+
 else:
     print("Java SDK 11 not found. Please install and try again.")
     print(h.get_jdk_url())
