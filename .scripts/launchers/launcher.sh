@@ -9,7 +9,8 @@ elif [ "$(uname)" == "Darwin" ]; then
     # If the OS is macOS, use open
     open "http://127.0.0.1:5000"
 else
-    echo "Unsupported operating system"
+    echo "Running on http://127.0.0.1:5000"
 fi
 
+pip install flask
 python app.py
