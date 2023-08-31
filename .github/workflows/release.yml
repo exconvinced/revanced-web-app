@@ -3,7 +3,7 @@ name: Release ReVanced Web App
 on:
   push:
     branches: 
-    - main
+    - master
 
 permissions:
   contents: write
