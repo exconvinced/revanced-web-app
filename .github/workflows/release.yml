@@ -52,6 +52,5 @@ jobs:
       id: create_release
       uses: softprops/action-gh-release@v1
       with:
-        tag_name: $RELEASE_TAG
-        files: |
-          $RELEASE_FILENAME
+        tag_name: ${{ env.RELEASE_TAG }}
+        files: ${{ env.RELEASE_FILENAME }}
