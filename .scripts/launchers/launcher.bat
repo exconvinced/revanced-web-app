@@ -1,5 +1,8 @@
-@echo off
-powershell.exe -ExecutionPolicy Bypass -File venv\bin\Activate.ps1
+python -m venv venv
+call venv\Scripts\activate.bat
+pip install flask
+
 start "" "http://127.0.0.1:5000"
+
 python app.py
 pause

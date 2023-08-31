@@ -1,5 +1,7 @@
 #!/bin/bash
+python -m venv venv
 source venv/bin/activate
+pip install flask
 
 # Check the operating system
 if [ "$(uname)" == "Linux" ]; then
