@@ -11,25 +11,38 @@ permissions:
 jobs:
   download-requirements:
     runs-on: ubuntu-latest
+
+    env:
+      RELEASE_TAG: "ReVanced Web App Test Release"
+      RELEASE_FILENAME: revanced-web-app
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
-        with:
-          python-version: 3.10.6
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.10.6
 
-      - name: Install venv
-        run: python -m venv venv
-        
-      - name: Activate venv
-        run: source venv/bin/activate
+    - name: Install venv
+      run: python -m venv venv
+      
+    - name: Activate venv
+      run: source venv/bin/activate
 
-      - name: Install Python requirements
-        run: pip install -r .scripts/requirements.txt
+    - name: Install Python requirements
+      run: pip install -r .scripts/requirements.txt
 
-      - name: Download project requirements
-        run: python .scripts/requirements.py
+    - name: Download project requirements
+      run: python .scripts/requirements.py
 
-      - name: Create zip archive
-        run: python .scripts/zip.py
+    - name: Create zip archive
+      run: python .scripts/zip.py $RELEASE_FILENAME
+
+    - name: Create GitHub Release
+      id: create_release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: $RELEASE_TAG
+        files: |
+          $RELEASE_FILENAME

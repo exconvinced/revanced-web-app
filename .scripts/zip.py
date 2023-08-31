@@ -1,8 +1,8 @@
-import zipfile, os
+import zipfile, os, sys
 
 FILES = ["bin/revanced/", "helper/", "static/", "templates/", "venv/", "app.py", "launcher.bat", "launcher.sh", "README.md"]
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ZIP_FILENAME = "revanced-web-app.zip"
+ZIP_FILENAME = sys.argv[1]
 IGNORE = [".git", "__pycache__", ".gitignore"]
 
 
