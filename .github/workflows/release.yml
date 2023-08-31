@@ -14,9 +14,12 @@ jobs:
 
     env:
       RELEASE_TAG: "ReVanced Web App Test Release"
-      RELEASE_FILENAME: revanced-web-app
+      RELEASE_FILENAME: "revanced-web-app"
 
     steps:
+    - name: Print env variables
+      run: echo $RELEASE_TAG && echo $RELEASE_FILENAME
+
     - name: Checkout
       uses: actions/checkout@v3
 

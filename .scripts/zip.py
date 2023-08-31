@@ -32,11 +32,14 @@ def collect_all_files():
 
 
 def main():
+    print(f"Zipping to {ZIP_FILENAME}...")
+
     with zipfile.ZipFile(ZIP_FILENAME, "w") as zipf:
         for file in collect_all_files():
             print(file)
             zipf.write(file, arcname=file[len(ROOT) + 1 :])
 
+    print(f"Zipped to {ZIP_FILENAME}.")
 
 if __name__ == "__main__":
     main()
