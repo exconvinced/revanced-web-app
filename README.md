@@ -1,5 +1,5 @@
 # ReVanced Web App
-### 📢 Release packages coming soon
+### 📢 Test release is [here](https://github.com/exconvinced/revanced-web-app/releases/tag/v0.0.0-dev)!
 
 #### Video Demo:  [ReVanced Web App](https://youtu.be/-MK7L0JYTxU)
 
