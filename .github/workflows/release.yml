@@ -31,13 +31,14 @@ jobs:
       run: python -m venv venv
 
     - name: Activate venv
-      run: source venv/bin/activate
-
-    - name: Install requests
-      run: pip install -r .scripts/requirements.txt
+      run: |
+        source venv/bin/activate
+        pip install -r .scripts/requirements.txt
 
     - name: Download project requirements
-      run: python .scripts/requirements.py
+      run: |
+        pip install requests  
+        python .scripts/requirements.py
 
     - name: Create zip archive
       run: python .scripts/zip.py $RELEASE_FILENAME
