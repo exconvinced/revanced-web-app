@@ -77,35 +77,40 @@
 <br>&nbsp;
 
 
-<div align="center">
-    <h3>
+<details>
+    <summary>
         Motivation
-    </h3>
-</div>
-<div align="center">
-    This project combines the familiar user experience of the mobile app
-    and the stability of the CLI, giving you the best of both worlds, 
-    and potentially saving you time from troubleshooting errors.
-</div>
-<br>&nbsp;
-<div align="center">
-    <h3>
+    </summary>
+    <br>
+    <p>
+        This project combines the familiar user experience of the mobile app <br>
+        and the stability of the CLI, giving you the best of both worlds, <br>
+        and potentially saving you time from troubleshooting errors.
+    </p>
+</details>
+
+<details>
+    <summary>
         Dedication
-    </h3>
-</div>
-<div align="center">
-    ReVanced Web App was initially my final project for <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50x</a>.
-    Driven by the stellar learning experience provided by the course, 
-    I was able to complete first working web app sooner than expected.
-    <br><br>
-    Never once in my life have I genuinely enjoyed an online course. In fact, I would definitely recommend the CS50 series to anyone for the sake of attending Professor Malan's lectures!
-</div>
-<br>&nbsp;
-<div align="center">
-    <h3>
+    </summary>
+    <br>
+    <p>
+        ReVanced Web App was initially my final project for <a href="https://www.edx.org/course/introduction-computer-science-harvardx-cs50x">CS50x</a>. <br>
+        Driven by the stellar learning experience provided by the course, <br>
+        I was able to complete first working web app sooner than expected. <br><br>
+        Never once in my life have I genuinely enjoyed an online course. <br>
+        In fact, I would definitely recommend the CS50 series to anyone <br>
+        for the sake of attending Professor Malan's lectures!
+    </p>
+</details>
+<details>
+    <summary>
         Appreciation 
-    </h3>
-</div>
-<div align="center">
-    I couldn't have been any happier! This project has reached the radar of the ReVanced team and stargazers, receiving their blessings. You lots prevented this project from going stale. More commits to come!
-</div>
+    </summary>
+    <br>
+    <p>
+        I couldn't have been any happier! This project has reached the radar of <br>
+        the ReVanced team and stargazers, receiving their blessings. You lots <br>
+        prevented this project from going stale. More commits to come!
+    </p>
+</details>
