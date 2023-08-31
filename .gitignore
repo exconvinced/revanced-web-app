@@ -26,3 +26,4 @@ scripts/bin/linux/aapt_64
 scripts/bin/win32/aapt_64.exe
 
 venv/
+.preview/banner.psd
