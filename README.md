@@ -27,9 +27,12 @@ Combines the comfortable user experience of the mobile app [ReVanced Manager](ht
 
 #### Preview
 
+![image](./.preview/demo.gif)
+
 Full layout             |  Mobile layout
 :-------------------------:|:-------------------------:
 ![image](./.preview/full_new.png)  |  ![image](./.preview/mobile.png)
+
 
 <!-- #### Prerequisites
 Download [Java SDK 11.0.2](https://jdk.java.net/archive/). 
