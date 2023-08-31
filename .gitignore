@@ -27,3 +27,4 @@ scripts/bin/win32/aapt_64.exe
 
 venv/
 .preview/banner.psd
+.preview/video to gif.txt
