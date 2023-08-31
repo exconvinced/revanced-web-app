@@ -5,7 +5,7 @@
   <br>
   Patch your apps on a familiar interface, now on powerful PC hardware.
   <br>
-  Built on Flask and Javascript.
+  Built with Flask and Javascript.
 </p>
 <h6 align="center">
     <i>Watch video demo <a href="https://youtu.be/-MK7L0JYTxU">here</a></i>
