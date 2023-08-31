@@ -58,9 +58,18 @@ def get_aapt():
     sp.run(['git', 'clone', url, aapt])
 
 
+def copy_launchers():
+    """
+    Copy the launchers to the root directory
+    """
+    for file in ['launcher.bat', 'launcher.sh']:
+        shutil.copy(join(ROOT_DIR, '.scripts', 'launchers', file), ROOT_DIR)
+
+
 def main():
     get_revanced()
     get_aapt()
+    copy_launchers()
 
 
 if __name__ == '__main__':
