@@ -3,9 +3,9 @@
 <p align="center">
   A web implementation of the popular <a href="https://github.com/ReVanced"><b>ReVanced</b></a>! 
   <br>
-  Patch your apps on a familiar interface and powerful PC hardware.
+  Patch your apps on a familiar interface, now on powerful PC hardware.
   <br>
-  Built on Flask and Javascript
+  Built on Flask and Javascript.
   <br>
   <br>
   <small>
