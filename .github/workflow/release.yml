@@ -1,0 +1,35 @@
+name: Release ReVanced Web App
+
+on:
+  push:
+    branches: 
+    - main
+
+permissions:
+  contents: write
+
+jobs:
+  download-requirements:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.10.6
+
+      - name: Install venv
+        run: python -m venv venv
+        
+      - name: Activate venv
+        run: source venv/bin/activate
+
+      - name: Install Python requirements
+        run: pip install -r .scripts/requirements.txt
+
+      - name: Download project requirements
+        run: python .scripts/requirements.py
+
+      - name: Create zip archive
+        run: python .scripts/zip.py
