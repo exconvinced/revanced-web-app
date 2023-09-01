@@ -13,9 +13,9 @@
 
 <div align="center">
     <h3>
-        ✨ Download test release:
+        ✨ Download latest build:
         <a href="https://github.com/exconvinced/revanced-web-app/releases/latest">
-            v0.0.0-dev
+            v0.0.0
         </a>
     </h3>
 </div>
