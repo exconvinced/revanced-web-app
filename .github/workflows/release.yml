@@ -9,7 +9,7 @@ on:
     - '!README.md'
     - '!.preview/*'
     - '!.github/*'
-    - '!LICENSE'
+    - '!LICENSE' 
 
 permissions:
   contents: write
