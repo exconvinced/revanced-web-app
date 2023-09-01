@@ -6,10 +6,6 @@ on:
     - master
     paths:
     - '**/*' # Trigger on any file change except the following
-    - '!README.md'
-    - '!.preview/*'
-    - '!.github/*'
-    - '!LICENSE' 
 
 permissions:
   contents: write
