@@ -141,10 +141,10 @@ function loadPatchesCheckbox(data) {
             `  
             <button
                 class="patch-checkbox-button bg-zinc-800 hover:bg-zinc-700 rounded-vanced p-6 text-left flex justify-between">
-                <ul class="text-sm space-y-1">
-                    <li><b class="patch-checkbox-label ${d.token}">${d.name}</b><br>
-                        <span class='opacity-50'>${d.version}</span> &nbsp; 
-                        <span class='opacity-25 text-xs'>${excludedMessage}</span>
+                <ul class="text-sm space-y-1 pr-6">
+                    <li><b class="patch-checkbox-label ${d.token}">${d.name}</b>
+                        <!-- <br><span class='opacity-50'>${d.version}</span> -->
+                        &nbsp;<span class='opacity-25 text-xs'>${excludedMessage}</span>
                     </li>
                     <li class='opacity-75'>${d.description}</li>
                 </ul>
