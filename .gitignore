@@ -1,6 +1,7 @@
 # Ignore cache
-**/__pycache__/**
-**/revanced-cache/**
+**/__pycache__/
+**/revanced-cache/
+**/revanced-resource-cache/
 
 # Ignore ReVanced dependencies
 revanced-cli*.jar
@@ -14,7 +15,8 @@ integrations*.apk
 options.json
 
 # Ignore stuff
-launch.bat
+# ignore any files of any type that starts with launch
+launcher.*
 static/unused/*
 templates/unused/*
 /bin/**
