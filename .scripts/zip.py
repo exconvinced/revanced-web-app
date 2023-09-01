@@ -1,6 +1,6 @@
 import zipfile, os, sys
 
-FILES = ["bin/revanced/", "helper/", "static/", "templates/", "app.py", "launcher.bat", "launcher.sh", "README.md"]
+FILES = ["bin/revanced/", "helper/", "static/", "templates/", "app.py", "launcher.bat", "launcher.sh"]
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ZIP_FILENAME = f"{sys.argv[1]}.zip"
 IGNORE = [".git", "__pycache__", ".gitignore"]
