@@ -15,7 +15,7 @@
     <h3>
         ✨ Download latest build:
         <a href="https://github.com/exconvinced/revanced-web-app/releases/latest">
-            v0.0.0
+            v1.0.0
         </a>
     </h3>
 </div>
