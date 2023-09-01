@@ -140,7 +140,7 @@ function loadPatchesCheckbox(data) {
         patches.innerHTML += 
             `  
             <button
-                class="pointer-events-none-button revanced-panel revanced-rounded p-6 text-left flex justify-between">
+                class="pointer-events-none-button revanced-button-secondary revanced-rounded p-6 text-left flex justify-between">
                 <ul class="text-sm space-y-1 pr-6">
                     <li><b class="pointer-events-none-label ${d.token}">${d.name}</b>
                         <!-- <br><span class='opacity-50'>${d.version}</span> -->
