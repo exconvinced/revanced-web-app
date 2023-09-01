@@ -1,10 +1,21 @@
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 300;
     font-size: 16px;
+    color: white;
+    background-color: rgb(26, 25, 31);
+}
+
+b {
+    font-weight: 700 !important;
+}
+
+h3 {
+    font-weight: 400 !important;
 }
 
 .font-mono {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Fira Code', monospace !important;
     font-size: 12px;
 }
 
@@ -14,14 +25,61 @@ body {
     cursor: not-allowed;
 }
 
-.patch-checkbox {
-    pointer-events: none;
-}
-
-.rounded-vanced {
+.revanced-rounded {
     border-radius: 0.75rem;
 }
 
 .gap-revanced {
     gap: 0.75rem;
+}
+
+.revanced-button {
+    background-color: rgb(0, 73, 124);
+    color: rgb(198, 226, 253);
+    font-weight: 400;
+    transition: background-color 0.1s ease-in-out;
+
+    &:hover {
+        background-color: rgb(28, 109, 167);
+        transition: background-color 0.1s ease-in-out;
+    }
+}
+
+.revanced-panel {
+    background-color: rgb(40, 45, 51);
+    transition: background-color 0.1s ease-in-out;
+
+    &:hover {
+        background-color: rgb(66, 73, 82);
+        transition: background-color 0.1s ease-in-out;
+    }
+}
+
+.entrance-animation {
+    -webkit-animation: body-initial-load 1s;
+    animation: body-initial-load 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes body-initial-load {
+    0% {
+        -webkit-transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 1;
+    }
+}
+
+@keyframes body-initial-load {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+    }
 }

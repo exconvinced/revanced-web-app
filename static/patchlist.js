@@ -100,7 +100,7 @@ function resetSelectedPatchesList() {
 }
 
 function updateSelectedPatchesList(element) {
-    const label = element.querySelector('.patch-checkbox-label');
+    const label = element.querySelector('.pointer-events-none-label');
     const classList = label.classList;
     const lastClass = classList.item(classList.length - 1);
     const selectedPatch = selectedPatchesList.querySelector(`.${lastClass}`);
@@ -140,22 +140,22 @@ function loadPatchesCheckbox(data) {
         patches.innerHTML += 
             `  
             <button
-                class="patch-checkbox-button bg-zinc-800 hover:bg-zinc-700 rounded-vanced p-6 text-left flex justify-between">
+                class="pointer-events-none-button revanced-panel revanced-rounded p-6 text-left flex justify-between">
                 <ul class="text-sm space-y-1 pr-6">
-                    <li><b class="patch-checkbox-label ${d.token}">${d.name}</b>
+                    <li><b class="pointer-events-none-label ${d.token}">${d.name}</b>
                         <!-- <br><span class='opacity-50'>${d.version}</span> -->
                         &nbsp;<span class='opacity-25 text-xs'>${excludedMessage}</span>
                     </li>
                     <li class='opacity-75'>${d.description}</li>
                 </ul>
-                <input type="checkbox" class="patch-checkbox" name="${d.token}" value="${d.name}" ${exclusion}>
+                <input type="checkbox" class="pointer-events-none" name="${d.token}" value="${d.name}" ${exclusion}>
             </button>
             `
         }
         
-    const checkBoxButtons = patches.querySelectorAll('.patch-checkbox-button')
+    const checkBoxButtons = patches.querySelectorAll('.pointer-events-none-button')
     checkBoxButtons.forEach(checkBoxButton => {
-        let checkbox = checkBoxButton.querySelector('.patch-checkbox');
+        let checkbox = checkBoxButton.querySelector('.pointer-events-none');
         if (checkbox.checked) {
             included_patches.push(checkbox.name);
             checkCount++;
@@ -184,7 +184,7 @@ function loadPatchesCheckbox(data) {
 function resetPatchesCheckbox() {
     patches.innerHTML = `  
             <button
-                class="patch-checkbox-button bg-zinc-800 hover:bg-zinc-700 rounded-vanced p-6 text-left flex justify-between">
+                class="pointer-events-none-button revanced-panel revanced-rounded p-6 text-left flex justify-between">
                 <ul class="text-sm space-y-1">
                     <li><b>No patches found</b></li>
                     <li class='opacity-75'>Load an application first</li>
