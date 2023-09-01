@@ -28,23 +28,23 @@ def get_compatible_patches(package_name=None, package_version=None) -> set:
     Return all compatible patches for a given package name and version
     """
     class Patch:
-        def __init__(self, name: str, description: str, version: str, excluded: bool):
+        def __init__(self, name: str, description: str, excluded: bool):
             self.name = name
             self.token = self.name.lower().replace(" ", "-")
             self.description = description
-            self.version = version
+            # self.version = version        # Removed from latest version
             self.excluded = excluded
 
     for p in patches_json:
         # If no compatible package is specified
         if not p["compatiblePackages"] or package_name is None and package_version is None:  
-            yield Patch(p["name"], p["description"], p["version"], p["excluded"]).__dict__
+            yield Patch(p["name"], p["description"], p["excluded"]).__dict__
         else:
             for package in p["compatiblePackages"]:
                 if package_name == package["name"]:
                     # If no compatible version is specified or the version is compatible
                     if not package["versions"] or package_version in package["versions"]:
-                        yield Patch(p["name"], p["description"], p["version"], p["excluded"]).__dict__
+                        yield Patch(p["name"], p["description"], p["excluded"]).__dict__
 
 
 def check_patch_exclusion(patch_name) -> bool:
@@ -136,22 +136,24 @@ def start_revanced_patch(args):
         yield data_stream(json.dumps({'error': error}))
         return
     
-    command = ["java", '-jar', rv.cli, '-a', rv.unpatched, '-o', rv.patched, '-b', rv.patches, '-m', rv.integrations, '--options', rv.options] + args.split()
+    command = ["java", "-jar", rv.cli, "patch", "--patch-bundle", rv.patches, "--out", rv.patched, "--options", rv.options, "--merge", rv.integrations, rv.unpatched ] + args.split()
 
     process = sp.Popen(command, stdout=sp.PIPE, stderr=sp.STDOUT, text=True)
-    for line in process.stdout: # Print both output and error messages
+    for line in process.stdout:
         last_line = line
-
         if 'PatchResultError' in line:
             break
         elif line.startswith("INFO:"):
             yield data_stream(json.dumps({'data': line}))
 
-    if 'Finished' not in last_line:
+    success_cue_msg = f"INFO: Copying to {os.path.basename(rv.patched)}"
+    if success_cue_msg not in last_line:
         error = 'An error occurred while patching the APK file.'
         yield data_stream(json.dumps({'error': f'ERROR: {error}'}))
-        process.terminate()
-        
+    else:
+        yield data_stream(json.dumps({'data': "INFO: Finished!"}))
+    
+    process.terminate()
     return
 
 

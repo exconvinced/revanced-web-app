@@ -35,7 +35,9 @@ def get_revanced():
 
     for package in requirements:
         name, version, extensions = package['name'], package['version'], package["extensions"]
-        api = f"https://api.github.com/repos/ReVanced/{name}/releases/tags/v{version}"
+        if version != 'latest':
+            version = f"tags/v{version}"
+        api = f"https://api.github.com/repos/ReVanced/{name}/releases/{version}"
 
         r = requests.get(api)
         if r.status_code == 200:
