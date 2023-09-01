@@ -93,3 +93,36 @@ h3 {
         opacity: 1;
     }
 }
+
+.download-button-animation {
+    -webkit-animation: button-initial-load 0.5s;
+    animation: button-initial-load 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes button-initial-load {
+    0% {
+        -webkit-transform: scale(0.9);
+        opacity: 0;
+        width: 1px;
+    }
+    100% {
+        -webkit-transform: scale(1.0);
+        opacity: 1;
+        width: 10rem;
+    }
+}
+
+@keyframes button-initial-load {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+        width: 1px;
+    }
+    100% {
+        transform: scale(1.0);
+        opacity: 1;
+        width: 10rem;
+    }
+}
