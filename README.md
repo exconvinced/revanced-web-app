@@ -41,13 +41,13 @@
 </div>
 <div align="center">
     <samp>cli</samp> 
-    <a href="https://github.com/ReVanced/revanced-cli/releases/tag/v2.22.0">
-        <b>v2.22.0</b>
+    <a href="https://github.com/ReVanced/revanced-cli/releases/tag/v3.1.0">
+        <b>v3.1.0</b>
     </a>
     &nbsp;
     <samp>patches</samp> 
-    <a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.187.0">
-        <b>v2.187.0</b>
+    <a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.189.0">
+        <b>v2.189.0</b>
     </a>
     &nbsp;
     <samp>integrations</samp> 
