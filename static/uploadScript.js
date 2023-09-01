@@ -5,7 +5,7 @@ import { disablePatchButton, enablePatchButton, resetPatchButton } from './patch
 document.addEventListener('DOMContentLoaded', function () {
     const uploadButton = document.getElementById('upload-button');
     const uploadText = uploadButton.querySelector('h3');
-    const defaultUploadText = uploadText.textContent;
+    var defaultUploadText = uploadText.textContent;
     const fileName = document.getElementById('file-name');
     const fileInput = document.getElementById('file-input');
 
@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!response.ok) {
                 resetAll()
                 uploadText.textContent = 'File not supported!'
+                defaultUploadText = uploadText.textContent;
                 uploadButton.classList.remove('disabled-button');
                 deactivateTerminal()
             }
             else {
                 enablePatchButton()
                 uploadText.textContent = 'Uploaded!'
+                defaultUploadText = uploadText.textContent;
                 uploadButton.classList.remove('disabled-button');
                 activateTerminal()
                 return response.json()
@@ -78,13 +80,17 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('drop', (event) => {
         event.preventDefault();
         fileInput.files = event.dataTransfer.files;
-        uploadText.textContent = 'Uploaded!';
-        uploadFile();
+        if (fileInput.files.length) {
+            uploadText.textContent = 'Uploaded!';
+            uploadFile();
+        }
+        uploadText.textContent = defaultUploadText;
         resetPatchButton();
     });
 
     fileInput.addEventListener('change', () => {
         uploadText.textContent = 'Uploaded!';
+        defaultUploadText = uploadText.textContent;
         uploadFile();
         resetPatchButton();
     });
