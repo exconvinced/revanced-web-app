@@ -110,7 +110,7 @@ h3 {
     100% {
         -webkit-transform: scale(1.0);
         opacity: 1;
-        width: 10rem;
+        width: 9rem;
     }
 }
 
@@ -123,6 +123,6 @@ h3 {
     100% {
         transform: scale(1.0);
         opacity: 1;
-        width: 10rem;
+        width: 9rem;
     }
 }
