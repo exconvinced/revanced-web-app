@@ -60,10 +60,10 @@
 
 <div align="center">
     <a href="https://youtu.be/dQw4w9WgXcQ">
-        <img width="78%" src="./.preview/demo-neighbor-360.gif" alt="image"/>
+        <img width="78%" src="./.preview/demo-bilinear-480.gif" alt="image"/>
     </a> 
     <a width="10vw" href="https://youtu.be/DfEnIFV2-mc">
-        <img width="20%" src="./.preview/demo-mobile-neighbor-360.gif" alt="image"/>
+        <img width="20%" src="./.preview/demo-mobile-bilinear-480.gif" alt="image"/>
     </a>
 </div>
 
