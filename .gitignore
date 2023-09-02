@@ -3,6 +3,8 @@
 **/revanced-cache/
 **/revanced-resource-cache/
 
+.preview/unused/
+
 # Ignore ReVanced dependencies
 revanced-cli*.jar
 revanced-patches*.jar
