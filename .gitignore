@@ -32,3 +32,20 @@ scripts/bin/win32/aapt_64.exe
 venv/
 .preview/banner.psd
 .preview/video to gif.txt
+.preview/notion_api-area-360.gif
+.preview/notion_api-area-480.gif
+.preview/notion_api-bicubic-360.gif
+.preview/notion_api-bicubic-480.gif
+.preview/notion_api-bilinear-360.gif
+.preview/notion_api-bilinear-480.gif
+.preview/notion_api-fast_bilinear-360.gif
+.preview/notion_api-fast_bilinear-480.gif
+.preview/notion_api-lanczos-360.gif
+.preview/notion_api-lanczos-480.gif
+.preview/notion_api-lanczos-720.gif
+.preview/notion_api-neighbor-360.gif
+.preview/notion_api-neighbor-480.gif
+.preview/notion_api-sinc-360.gif
+.preview/notion_api-sinc-480.gif
+.preview/notion_api-spline-360.gif
+.preview/notion_api-spline-480.gif
