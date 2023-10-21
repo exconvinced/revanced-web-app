@@ -9,6 +9,9 @@ const uploadButton = document.getElementById('upload-button');
 let checkCount = 0;
 
 
+
+
+
 let included_patches = [];
 let excluded_patches = [];
 let dataToSend = {
@@ -154,7 +157,7 @@ function loadPatchesCheckbox(data) {
                     </li>
                     ${description}
                 </ul>
-                <input type="checkbox" class="pointer-events-none self-center" name="${d.name}" value="${d.name}" ${exclusion}>
+                <input type="checkbox" class="pointer-events-none self-center min-w-10" name="${d.name}" value="${d.name}" ${exclusion}>
             </button>
             `
         }
