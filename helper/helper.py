@@ -2,6 +2,7 @@ import os, sys, json
 import subprocess as sp
 from helper.aapt.aapt import APK
 from helper.revanced import REVANCED_DIR, APK_DIR, ReVanced
+# import pandas as pd
 
 
 rv = ReVanced()
@@ -10,13 +11,24 @@ with open(rv.patches_json, 'r') as f:
     patches_json = json.load(f)
 
 
-def get_latest_app_version(package_name) -> list:
+def get_latest_app_version(package_name):
     """
     Return all compatible app versions for a given package name
     """
+
     def version_key(version):
         return tuple(map(int, (version.split("."))))
-    versions = set(version for patch in patches_json for package in patch['compatiblePackages'] if package['name'] == package_name for version in package['versions'])
+    
+    versions = set()
+    for p in patches_json:
+        if p.get("compatiblePackages"):
+            for package in p["compatiblePackages"]:
+                if package.get("name") and package.get("versions"):
+                    if package["name"] == package_name:
+                        versions.update(package["versions"])
+    print(versions)
+
+
     try:
         return sorted(versions, key=version_key)[-1]
     except:
@@ -38,13 +50,13 @@ def get_compatible_patches(package_name=None, package_version=None) -> set:
     for p in patches_json:
         # If no compatible package is specified
         if not p["compatiblePackages"] or package_name is None and package_version is None:  
-            yield Patch(p["name"], p["description"], p["excluded"]).__dict__
+            yield Patch(p["name"], p["description"], p["use"]).__dict__
         else:
             for package in p["compatiblePackages"]:
                 if package_name == package["name"]:
                     # If no compatible version is specified or the version is compatible
                     if not package["versions"] or package_version in package["versions"]:
-                        yield Patch(p["name"], p["description"], p["excluded"]).__dict__
+                        yield Patch(p["name"], p["description"], p["use"]).__dict__
 
 
 def check_patch_exclusion(patch_name) -> bool:
