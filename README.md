@@ -15,7 +15,7 @@
     <h3>
         ✨ Download latest build:
         <a href="https://github.com/exconvinced/revanced-web-app/releases/latest">
-            v1.0.0
+            ReVanced Web App
         </a>
     </h3>
 </div>
@@ -41,18 +41,18 @@
 </div>
 <div align="center">
     <samp>cli</samp> 
-    <a href="https://github.com/ReVanced/revanced-cli/releases/tag/v3.1.0">
-        <b>v3.1.0</b>
+    <a href="https://github.com/ReVanced/revanced-cli/releases/tag/v4.0.2">
+        <b>v4.0.2</b>
     </a>
     &nbsp;
     <samp>patches</samp> 
-    <a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.189.0">
-        <b>v2.189.0</b>
+    <a href="https://github.com/ReVanced/revanced-patches/releases/tag/v2.195.0">
+        <b>v2.195.0</b>
     </a>
     &nbsp;
     <samp>integrations</samp> 
-    <a href="https://github.com/ReVanced/revanced-integrations/releases/tag/v0.117.0">
-        <b>v0.117.0</b>
+    <a href="https://github.com/ReVanced/revanced-integrations/releases/tag/v0.120.0">
+        <b>v0.120.0</b>
     </a>
 </div>
 
