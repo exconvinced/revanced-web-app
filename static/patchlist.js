@@ -137,6 +137,12 @@ function loadPatchesCheckbox(data) {
             excludedMessage = ''
         }
 
+        let description = ''
+        if (d.description) {
+            description = `<li class='opacity-75'>${d.description}</li>`
+        }
+
+
         patches.innerHTML += 
             `  
             <button
@@ -146,7 +152,7 @@ function loadPatchesCheckbox(data) {
                         <!-- <br><span class='opacity-50'>${d.version}</span> -->
                         &nbsp;<span class='opacity-25 text-xs'>${excludedMessage}</span>
                     </li>
-                    <li class='opacity-75'>${d.description}</li>
+                    ${description}
                 </ul>
                 <input type="checkbox" class="pointer-events-none" name="${d.name}" value="${d.name}" ${exclusion}>
             </button>
