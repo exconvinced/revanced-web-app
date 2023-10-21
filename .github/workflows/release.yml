@@ -16,7 +16,7 @@ jobs:
     if: "contains(github.event.head_commit.message, '[ci]')"
 
     env:
-      RELEASE_TAG: "release-$(date +'%Y-%m-%d-%H-%M-%S')"
+      RELEASE_TAG: "release"
       RELEASE_FILENAME: "revanced-web-app"
 
     steps:
