@@ -4,6 +4,10 @@ body {
     font-size: 16px;
     color: white;
     background-color: rgb(26, 25, 31);
+
+    /* scrollbar-width: thin; */
+    /* scrollbar-color: transparent transparent; */
+    /* overflow-y: overlay; */
 }
 
 ::selection {
@@ -125,4 +129,31 @@ h3 {
         opacity: 1;
         width: 9rem;
     }
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0, 0);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #BDBDBD;
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6E6E6E;
+    width: 10px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+    border-radius: 20px;
 }
