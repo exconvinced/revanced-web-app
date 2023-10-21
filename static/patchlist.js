@@ -148,7 +148,7 @@ function loadPatchesCheckbox(data) {
                     </li>
                     <li class='opacity-75'>${d.description}</li>
                 </ul>
-                <input type="checkbox" class="pointer-events-none" name="${d.token}" value="${d.name}" ${exclusion}>
+                <input type="checkbox" class="pointer-events-none" name="${d.name}" value="${d.name}" ${exclusion}>
             </button>
             `
         }

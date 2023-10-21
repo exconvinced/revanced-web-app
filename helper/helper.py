@@ -26,8 +26,6 @@ def get_latest_app_version(package_name):
                 if package.get("name") and package.get("versions"):
                     if package["name"] == package_name:
                         versions.update(package["versions"])
-    print(versions)
-
 
     try:
         return sorted(versions, key=version_key)[-1]
@@ -40,12 +38,12 @@ def get_compatible_patches(package_name=None, package_version=None) -> set:
     Return all compatible patches for a given package name and version
     """
     class Patch:
-        def __init__(self, name: str, description: str, excluded: bool):
-            self.name = name
-            self.token = self.name.lower().replace(" ", "-")
-            self.description = description
+        def __init__(self, name: str, description: str, use: bool):
+            self.name: str = name
+            self.token: str = self.name.lower().replace(" ", "-").replace("'", "")
+            self.description: str = description
             # self.version = version        # Removed from latest version
-            self.excluded = excluded
+            self.excluded: bool = not use
 
     for p in patches_json:
         # If no compatible package is specified
@@ -64,21 +62,24 @@ def check_patch_exclusion(patch_name) -> bool:
     Return True if a patch is excluded by default
     """
     for patch in get_compatible_patches():
-        if patch['name'].lower().replace(' ', '-') == patch_name:
+        if patch['name'].lower() == patch_name.lower():
             return patch['excluded']
     return False
 
 
-def generate_revanced_args(data, args=str()) -> str:
+def generate_revanced_args(data) -> str:
     """
     Return additional commandline arguments for included/excluded patches
     """
+    args=[]
     for patch in data['included_patches']:
         if check_patch_exclusion(patch):
-            args += f'-i {patch} '
+            args.append(f'--include')
+            args.append(f'{patch}')
     for patch in data['excluded_patches']:
         if not check_patch_exclusion(patch):
-            args += f'-e {patch} '
+            args.append(f'--exclude')
+            args.append(f'{patch}')
     return args
 
 
@@ -148,7 +149,9 @@ def start_revanced_patch(args):
         yield data_stream(json.dumps({'error': error}))
         return
     
-    command = ["java", "-jar", rv.cli, "patch", "--patch-bundle", rv.patches, "--out", rv.patched, "--options", rv.options, "--merge", rv.integrations, rv.unpatched ] + args.split()
+    command = ["java", "-jar", rv.cli, "patch", "--patch-bundle", rv.patches, "--out", rv.patched, "--options", rv.options, "--merge", rv.integrations, rv.unpatched] + args
+
+    print(command)
 
     process = sp.Popen(command, stdout=sp.PIPE, stderr=sp.STDOUT, text=True)
     for line in process.stdout:
@@ -158,7 +161,7 @@ def start_revanced_patch(args):
         elif line.startswith("INFO:"):
             yield data_stream(json.dumps({'data': line}))
 
-    success_cue_msg = f"INFO: Copying to {os.path.basename(rv.patched)}"
+    success_cue_msg = f"INFO: Signing {os.path.basename(rv.unpatched)}"
     if success_cue_msg not in last_line:
         error = 'An error occurred while patching the APK file.'
         yield data_stream(json.dumps({'error': f'ERROR: {error}'}))
